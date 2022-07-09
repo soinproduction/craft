@@ -1,0 +1,30 @@
+header {
+  background-color: var(--color-b);
+  position: relative;
+  z-index: 10;
+}
+
+.header {
+  position: relative;
+  padding: 18px 0;
+
+  &::before {
+    width: 211px;
+    height: 50px;
+    content: '';
+    position: absolute;
+    background-image: var(--header-brow);
+    transform: translateX(-50%);
+    left: 50%;
+    top: 30px;
+    z-index: 1;
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    z-index: 2;
+  }
+}

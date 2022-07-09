@@ -1,0 +1,35 @@
+.main-title {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(30px, 5vw, 60px);
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-a);
+}
+
+
+.show-more {
+  width: 202px;
+  height: 48px;
+  border: 2px solid var(--plus-bg);
+
+
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-a);
+  transition: all .4s;
+
+  &:hover {
+    background-color: var(--plus-bg);
+    transform: scale(1.05);
+  }
+
+}

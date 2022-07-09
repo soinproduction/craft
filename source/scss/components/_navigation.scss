@@ -1,0 +1,10 @@
+.main-nav {
+
+  &__list {
+    display: flex;
+
+    .nav-list__item:first-child {
+      flex-grow: 1;
+    }
+  }
+}

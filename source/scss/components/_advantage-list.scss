@@ -1,0 +1,32 @@
+.advatage-list {
+  display: grid;
+  grid-template-columns: auto repeat(4, 1fr);
+  align-items: stretch;
+  grid-gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-gap: clamp(25px, 3.333vw, 40px);
+    max-width: Min(25vw, 300px);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(16px, 1.583vw, 19px);
+    line-height: 150%;
+    color: var(--color-a);
+  }
+}

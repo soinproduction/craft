@@ -1,0 +1,120 @@
+.product-card {
+    width: 100%;
+    padding: 25px;
+    border: 2px solid var(--color-e);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+
+  &__image {
+    position: relative;
+    display: flex;
+
+    picture, img {
+      width: 100%;
+    }
+  }
+
+  &__deg {
+    font-family: var(--font-family2);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--color-c);
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--color-a);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-gap: 20px;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--plus-bg);
+  }
+
+  &__value {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--color-c);
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__add {
+    width: 119px;
+    height: 48px;
+    border: 2px solid  var(--plus-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    color: var(--color-a);
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+
+  &__volume {
+    font-family: var(--font-family2);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--color-c);
+  }
+
+  &__price-value {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--color-a);
+  }
+}

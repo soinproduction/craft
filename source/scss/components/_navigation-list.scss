@@ -1,0 +1,22 @@
+.navigation-list {
+  display: flex;
+  justify-content: center;
+  grid-gap: 30px clamp(30px, 5.583vw, 67px);
+  flex-wrap: wrap;
+
+  &__link {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--color-c);
+    transition: all .4s;
+
+    &:hover,
+    &--active {
+      color: var(--color-a);
+    }
+  }
+}
