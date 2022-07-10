@@ -123,6 +123,13 @@ picture {
   }
 }
 
+.panel {
+  z-index: 20;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease-out;
+}
+
 [data-tab-content] {
   display: none;
 

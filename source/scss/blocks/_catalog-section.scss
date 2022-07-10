@@ -1,0 +1,31 @@
+.catalog-section {
+  background-image: url(../img/sprite/catalog-bg.svg);
+  background-position: left bottom;
+  // background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0 0 clamp(30px, 7.5vw, 90px);
+
+  &__nav {
+    grid-gap: clamp(15px, 2.5vw, 30px);
+    justify-content: flex-start;
+    margin-bottom: 16px;
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 90px;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 100%;
+    color: var(--color-a);
+    margin-bottom: 25px;
+  }
+
+  &__filters {
+    margin-bottom: 40px;
+  }
+}

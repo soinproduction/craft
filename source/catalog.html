@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="Ru">
+  @include('partials/head.html')
+
+<body>
+    @include('partials/header-mode.html')
+
+    <main>
+        <section class="catalog-section">
+          <div class="container">
+            <div class="catalog">
+
+              <aside class="catalog-aside">
+                <h2 class="catalog-aside__title">
+                  Обрати товар:
+                </h2>
+
+                <ul class="catalog-accordion accordions">
+                  <li class="catalog-accordion__item">
+                    <button class="catalog-accordion__button" data-id="1">
+                      Продукція
+                      <svg width='13' height='8'>
+                        <use href='img/sprite/sprite.svg#arrow-bottom'></use>
+                      </svg>
+                    </button>
+
+                    <ul class="catalog-accordion__checkboxes panel" data-content="1">
+                      <li class="catalog-accordion__checkbox">
+                        123
+                      </li>
+                    </ul>
+
+                  </li>
+                </ul>
+
+              </aside>
+
+
+              <div class="catalog__inner">
+                <ul class="navigation-list catalog-section__nav">
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      О нас
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="catalog.html" class="navigation-list__link">
+                      Каталог
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      Акції
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link navigation-list__link--active">
+                      Програма лояльності
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      Наші партнери
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      Доставка
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      Контакти
+                    </a>
+                  </li>
+                </ul>
+
+                <ul class="breadcrumbs catalog-section__breadcrumbs">
+                  <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">
+                      Головна
+                    </a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">
+                      Каталог
+                    </a>
+                  </li>
+                </ul>
+
+                <h2 class="catalog-section__title">
+                  Каталог
+                </h2>
+
+                <div class="catalog-filters catalog-section__filters">
+                  <span class="catalog-filters__name">
+                    Сортувати по:
+                  </span>
+
+                  <ul class="catalog-filters__list">
+                    <li class="catalog-filters__item">
+                      <button class="catalog-filters__button">
+                        назві
+                      </button>
+                    </li>
+                    <li class="catalog-filters__item">
+                      <button class="catalog-filters__button">
+                        ціні
+                      </button>
+                    </li>
+                    <li class="catalog-filters__item">
+                      <button class="catalog-filters__button">
+                        Рейтингу
+                      </button>
+                    </li>
+                    <li class="catalog-filters__item">
+                      <button class="catalog-filters__button">
+                        популярності
+                        <svg width="6" height="8" >
+                          <use href='img/sprite/sprite.svg#arrow-top'></use>
+                        </svg>
+                      </button>
+                    </li>
+
+                    <li class="catalog-filters__item">
+                      <button class="catalog-filters__button">
+                        об’єму
+                      </button>
+                    </li>
+
+                    <li class="catalog-filters__item">
+                      <button class="catalog-filters__button">
+                        країні
+                      </button>
+                    </li>
+
+                    <li class="catalog-filters__item">
+                      <button class="catalog-filters__button">
+                        тарі
+                      </button>
+                    </li>
+                  </ul>
+
+                  <p class="catalog-filters__result">
+                    Знайдено:
+                    <span class="catalog-filters__value">
+                      9 товарів
+                    </span>
+                  </p>
+
+                </div>
+
+                <ul class="product-list">
+                  <li class="product-list__item">
+                    <div class="product-card">
+                      <a href="#" class="product-card__image">
+                        <span class="product-card__deg">
+                          11.3 %
+                        </span>
+                        <picture>
+                          <source type='image/webp' srcset='img/product/img.webp'>
+                          <img width='230' height='260' src='img/product/img.png' alt='product'>
+                        </picture>
+                      </a>
+                      <span class="product-card__name">
+                        Harviestoun “Old Engine Oil”
+                      </span>
+                      <ul class="product-card__list">
+                        <li class="product-card__item">
+                          <span class="product-card__title">Країна:</span>
+                          <span class="product-card__value">США</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Вид:</span>
+                          <span class="product-card__value">Янтарний ель</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Колір</span>
+                          <span class="product-card__value">Темне, фільтроване</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Гіркість:</span>
+                          <span class="product-card__value">Солодке</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Густина:</span>
+                          <span class="product-card__value">200</span>
+                        </li>
+                      </ul>
+                      <div class="product-card__bottom">
+                        <button class="product-card__add">
+                          у кошик
+                        </button>
+                        <div class="product-card__price">
+                          <span class="product-card__volume">
+                            500 мл
+                          </span>
+                          <span class="product-card__price-value">
+                            150 ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="product-list__item">
+                    <div class="product-card">
+                      <a href="#" class="product-card__image">
+                        <span class="product-card__deg">
+                          11.3 %
+                        </span>
+                        <picture>
+                          <source type='image/webp' srcset='img/product/img2.webp'>
+                          <img width='230' height='260' src='img/product/img2.png' alt='product'>
+                        </picture>
+                      </a>
+                      <span class="product-card__name">
+                        Harviestoun “Old Engine Oil”
+                      </span>
+                      <ul class="product-card__list">
+                        <li class="product-card__item">
+                          <span class="product-card__title">Країна:</span>
+                          <span class="product-card__value">США</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Вид:</span>
+                          <span class="product-card__value">Янтарний ель</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Колір</span>
+                          <span class="product-card__value">Темне, фільтроване</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Гіркість:</span>
+                          <span class="product-card__value">Солодке</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Густина:</span>
+                          <span class="product-card__value">200</span>
+                        </li>
+                      </ul>
+                      <div class="product-card__bottom">
+                        <button class="product-card__add">
+                          у кошик
+                        </button>
+                        <div class="product-card__price">
+                          <span class="product-card__volume">
+                            500 мл
+                          </span>
+                          <span class="product-card__price-value">
+                            150 ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="product-list__item">
+                    <div class="product-card">
+                      <a href="#" class="product-card__image">
+                        <span class="product-card__deg">
+                          11.3 %
+                        </span>
+                        <picture>
+                          <source type='image/webp' srcset='img/product/img.webp'>
+                          <img width='230' height='260' src='img/product/img.png' alt='product'>
+                        </picture>
+                      </a>
+                      <span class="product-card__name">
+                        Harviestoun “Old Engine Oil”
+                      </span>
+                      <ul class="product-card__list">
+                        <li class="product-card__item">
+                          <span class="product-card__title">Країна:</span>
+                          <span class="product-card__value">США</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Вид:</span>
+                          <span class="product-card__value">Янтарний ель</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Колір</span>
+                          <span class="product-card__value">Темне, фільтроване</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Гіркість:</span>
+                          <span class="product-card__value">Солодке</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Густина:</span>
+                          <span class="product-card__value">200</span>
+                        </li>
+                      </ul>
+                      <div class="product-card__bottom">
+                        <button class="product-card__add">
+                          у кошик
+                        </button>
+                        <div class="product-card__price">
+                          <span class="product-card__volume">
+                            500 мл
+                          </span>
+                          <span class="product-card__price-value">
+                            150 ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="product-list__item">
+                    <div class="product-card">
+                      <a href="#" class="product-card__image">
+                        <span class="product-card__deg">
+                          11.3 %
+                        </span>
+                        <picture>
+                          <source type='image/webp' srcset='img/product/img2.webp'>
+                          <img width='230' height='260' src='img/product/img2.png' alt='product'>
+                        </picture>
+                      </a>
+                      <span class="product-card__name">
+                        Harviestoun “Old Engine Oil”
+                      </span>
+                      <ul class="product-card__list">
+                        <li class="product-card__item">
+                          <span class="product-card__title">Країна:</span>
+                          <span class="product-card__value">США</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Вид:</span>
+                          <span class="product-card__value">Янтарний ель</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Колір</span>
+                          <span class="product-card__value">Темне, фільтроване</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Гіркість:</span>
+                          <span class="product-card__value">Солодке</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Густина:</span>
+                          <span class="product-card__value">200</span>
+                        </li>
+                      </ul>
+                      <div class="product-card__bottom">
+                        <button class="product-card__add">
+                          у кошик
+                        </button>
+                        <div class="product-card__price">
+                          <span class="product-card__volume">
+                            500 мл
+                          </span>
+                          <span class="product-card__price-value">
+                            150 ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="product-list__item">
+                    <div class="product-card">
+                      <a href="#" class="product-card__image">
+                        <span class="product-card__deg">
+                          11.3 %
+                        </span>
+                        <picture>
+                          <source type='image/webp' srcset='img/product/img.webp'>
+                          <img width='230' height='260' src='img/product/img.png' alt='product'>
+                        </picture>
+                      </a>
+                      <span class="product-card__name">
+                        Harviestoun “Old Engine Oil”
+                      </span>
+                      <ul class="product-card__list">
+                        <li class="product-card__item">
+                          <span class="product-card__title">Країна:</span>
+                          <span class="product-card__value">США</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Вид:</span>
+                          <span class="product-card__value">Янтарний ель</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Колір</span>
+                          <span class="product-card__value">Темне, фільтроване</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Гіркість:</span>
+                          <span class="product-card__value">Солодке</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Густина:</span>
+                          <span class="product-card__value">200</span>
+                        </li>
+                      </ul>
+                      <div class="product-card__bottom">
+                        <button class="product-card__add">
+                          у кошик
+                        </button>
+                        <div class="product-card__price">
+                          <span class="product-card__volume">
+                            500 мл
+                          </span>
+                          <span class="product-card__price-value">
+                            150 ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="product-list__item">
+                    <div class="product-card">
+                      <a href="#" class="product-card__image">
+                        <span class="product-card__deg">
+                          11.3 %
+                        </span>
+                        <picture>
+                          <source type='image/webp' srcset='img/product/img2.webp'>
+                          <img width='230' height='260' src='img/product/img2.png' alt='product'>
+                        </picture>
+                      </a>
+                      <span class="product-card__name">
+                        Harviestoun “Old Engine Oil”
+                      </span>
+                      <ul class="product-card__list">
+                        <li class="product-card__item">
+                          <span class="product-card__title">Країна:</span>
+                          <span class="product-card__value">США</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Вид:</span>
+                          <span class="product-card__value">Янтарний ель</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Колір</span>
+                          <span class="product-card__value">Темне, фільтроване</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Гіркість:</span>
+                          <span class="product-card__value">Солодке</span>
+                        </li>
+                        <li class="product-card__item">
+                          <span class="product-card__title">Густина:</span>
+                          <span class="product-card__value">200</span>
+                        </li>
+                      </ul>
+                      <div class="product-card__bottom">
+                        <button class="product-card__add">
+                          у кошик
+                        </button>
+                        <div class="product-card__price">
+                          <span class="product-card__volume">
+                            500 мл
+                          </span>
+                          <span class="product-card__price-value">
+                            150 ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </section>
+    </main>
+
+
+    @include('partials/footer.html')
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

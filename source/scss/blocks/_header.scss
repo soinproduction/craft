@@ -27,4 +27,25 @@ header {
     top: 20px;
     z-index: 2;
   }
+
+  &--mode {
+    &::before {
+      left: 0;
+      transform: none;
+    }
+
+    .header__logo {
+      left: 0;
+      transform: translateX(43px);
+      opacity: .7;
+    }
+
+    .nav-list {
+      justify-content: flex-end;
+    }
+
+    .main-nav__list .nav-list__item:first-child {
+      flex-grow: initial;
+    }
+  }
 }

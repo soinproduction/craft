@@ -1,0 +1,6 @@
+.catalog {
+  padding-top: 36px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-gap: clamp(20px, 3.333vw, 40px);
+}
