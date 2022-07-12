@@ -17,6 +17,7 @@
   &__list {
     display: flex;
     grid-gap: 14px;
+    flex-wrap: wrap;
   }
 
   &__button {

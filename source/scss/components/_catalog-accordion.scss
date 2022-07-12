@@ -1,0 +1,45 @@
+.catalog-accordion {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+
+  &__item {
+    padding-bottom: 20px;
+    border-bottom: 3px solid #474747;
+  }
+
+
+  &__button {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--color-c);
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    transition:  all .4s;
+
+    svg {
+      transition:  all .4s;
+    }
+
+    &.active {
+      margin-bottom: 20px;
+      color: var(--color-a);
+
+      svg {
+        transform:scaleY(-1);
+      }
+
+    }
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+}

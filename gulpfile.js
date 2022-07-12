@@ -244,7 +244,7 @@ const watchFiles = () => {
 }
 
 const cache = () => {
-  return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,avif,woff2}`, {
+  return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,avif,woff2, woff}`, {
       base: buildFolder
     })
     .pipe(rev())

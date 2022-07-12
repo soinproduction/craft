@@ -1,18 +1,38 @@
 // import './_vendor';
 // import vars from './_vars';
-// import './_functions';
+import './_functions';
 import './_components';
 
 
 
 
-// const burgerBtn = document.querySelector(".burger-btn");
+
+
+
+
+// console.log(burgerBtn)
+
+
+
+// getHeaderHeight()
+
+// const mobileMenuInit = function() {
+//   burgerBtn.classList.toggle('active')
+//   mobileMenu.classList.toggle('active');
+// }
+
+// burgerBtn.addEventListener('click', mobileMenuInit)
+
+
+
+
+
 // const profile = document.querySelectorAll(".profile-links");
 // const replaceElement = [...document.querySelectorAll(".data-replace")];
 // const replaceNav = document.querySelectorAll(".replace-navigation");
 // const topInner = document.querySelector(".top-parrent");
 // const bottomInner = document.querySelector(".bottom-parrent");
-// const mobileInner = document.querySelector(".data-mobile-inner");
+
 // const breakpoint = 1024;
 // const breakpointSecond = 767;
 // const body = document.body;
@@ -106,57 +126,3 @@ import './_components';
 // };
 
 
-// const getAccordions = function(dataName = "[data-id]") {
-//     return document.querySelectorAll(dataName);
-// }
-
-// const accordions = getAccordions();
-// let openedAccordion = null;
-
-// const closeAccordion = function(accordion) {
-//     accordion.style.maxHeight = 0;
-//     accordion.classList.remove('open')
-// };
-
-// const openAccordion = function(accordion) {
-//     accordion.style.maxHeight = accordion.scrollHeight + "px";
-//     accordion.classList.add('open')
-// };
-
-// const toggleAccordionButton = function(button, className = "active") {
-//     button.classList.toggle(className);
-// };
-
-// const checkIsAccordionOpen = function(accordion) {
-//     return accordion.style.maxHeight && accordion.style.maxHeight !== "0px";
-// }
-
-// const accordionClickHandler = function() {
-
-//     let curentDataNumber = this.dataset.id
-
-//     toggleAccordionButton(this);
-
-//     const accordionContent = document.querySelector(`[data-content="${curentDataNumber}"]`);
-//     const isAccordionOpen = checkIsAccordionOpen(accordionContent);
-
-//     if (isAccordionOpen) {
-//         closeAccordion(accordionContent);
-//         openedAccordion = null;
-//     } else {
-//         if (openedAccordion != null) {
-//             closeAccordion(openedAccordion);
-//             const accordionButton = document.querySelector(`[data-id="${openedAccordion.dataset.content}"]`)
-//             toggleAccordionButton(accordionButton);
-//         }
-//         openAccordion(accordionContent);
-//         openedAccordion = accordionContent;
-//     }
-// }
-
-// const activateAccordion = function(accordions, handler) {
-//     for (const accordion of accordions) {
-//         accordion.addEventListener('click', handler)
-//     }
-// }
-// activateAccordion(accordions, accordionClickHandler);

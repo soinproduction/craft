@@ -9,9 +9,10 @@ import { enableScroll } from '../functions/enable-scroll';
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
-    menu?.classList.toggle('menu--active');
+    menu?.classList.toggle('mobile-menu--active');
+    overlay?.classList.toggle('active');
 
-    if (menu?.classList.contains('menu--active')) {
+    if (menu?.classList.contains('mobile-menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
       burger?.setAttribute('aria-label', 'Закрыть меню');
       disableScroll();
@@ -22,21 +23,47 @@ import { enableScroll } from '../functions/enable-scroll';
     }
   });
 
-  overlay?.addEventListener('click', () => {
-    burger?.setAttribute('aria-expanded', 'false');
-    burger?.setAttribute('aria-label', 'Открыть меню');
-    burger.classList.remove('burger--active');
-    menu.classList.remove('menu--active');
-    enableScroll();
-  });
+  overlay?.addEventListener('click', function() {
 
-  menuItems?.forEach(el => {
-    el.addEventListener('click', () => {
+    if (overlay?.classList.contains('active')) {
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
-      menu.classList.remove('menu--active');
+      menu.classList.remove('mobile-menu--active');
+      overlay?.classList.remove('active');
+      filterBtn?.classList.remove('mobile-filters--active')
+      filterMenu?.classList.remove('active');
       enableScroll();
-    });
+    }
+
+
   });
+
+  const filterBtn = document.querySelector(".mobile-filters");
+  const filterMenu = document.querySelector(".catalog-aside");
+
+
+  filterBtn?.addEventListener('click', function(){
+    filterBtn?.classList.toggle('mobile-filters--active')
+    filterMenu?.classList.toggle('active');
+    overlay?.classList.toggle('active');
+  });
+
+  //   window.addEventListener('click', function(e) {
+  //     if (e.target.classList.contains('catalog-aside.active')) {
+  //         console.log('123')
+  //     }
+  // });
+
+
+
+  // menuItems?.forEach(el => {
+  //   el.addEventListener('click', () => {
+  //     burger?.setAttribute('aria-expanded', 'false');
+  //     burger?.setAttribute('aria-label', 'Открыть меню');
+  //     burger.classList.remove('burger--active');
+  //     menu.classList.remove('mobile-menu--active');
+  //     enableScroll();
+  //   });
+  // });
 })();

@@ -1,6 +1,8 @@
 .nav-list {
   display: flex;
   grid-gap: 17px 30px;
+  position: relative;
+  z-index: 30;
 
   &__link {
     display: flex;

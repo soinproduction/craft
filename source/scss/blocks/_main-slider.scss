@@ -2,7 +2,7 @@
 
 
   &__slide {
-    padding: clamp(130px ,14.167vw, 170px) 0 Min(10vw, 120px);
+    padding: clamp(115px ,14.167vw, 170px) 0 clamp(80px,10vw, 120px);
     min-height: Min(46.75vw, 561px);
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,6 +15,12 @@
     grid-gap: 32px;
     position: relative;
     z-index: 0;
+    opacity: 0;
+
+    &.swiper-slide-active {
+      opacity: 1;
+      z-index: 5;
+    }
 
     &::before {
       position: absolute;
@@ -32,6 +38,8 @@
   &__descr {
     display: flex;
     grid-gap: 20px clamp(20px, 3.333vw, 40px);
+    justify-content: center;
+    flex-wrap: wrap;
 
     &-item {
       font-family: var(--font-family);
@@ -42,6 +50,7 @@
       text-transform: uppercase;
       color: var(--color-a);
       position: relative;
+      transition: all .4s;
 
       &:not(:first-child) {
         padding-left: calc(clamp(20px, 3.333vw, 40px) + 13px);
@@ -74,7 +83,12 @@
         }
       }
 
-
+      a {
+        transition: all .4s;
+          &:hover {
+            transform: scale(1.5);
+        }
+      }
     }
   }
 

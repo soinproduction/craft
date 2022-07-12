@@ -29,4 +29,22 @@
     line-height: 150%;
     color: var(--color-a);
   }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 100%;
+      max-width: 230px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+
+
+    &__item {
+      max-width: calc(50% - 8px);
+    }
+  }
 }

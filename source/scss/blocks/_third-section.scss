@@ -21,8 +21,9 @@
   &__nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    grid-gap: clamp(40px, 6.667vw, 80px);
+    grid-gap: 30px clamp(40px, 6.667vw, 80px);
 
     &-item {
       font-family: var(--font-family);
@@ -36,10 +37,18 @@
       user-select: none;
       cursor: pointer;
 
-      &:hover,
+
       &.active {
         color: var(--plus-bg);
       }
+
+      &:hover {
+        color: var(--color-a);
+      }
     }
+
+    // @media screen and (max-width: 576px) {
+    //  flex-wrap: ;
+    // }
   }
 }

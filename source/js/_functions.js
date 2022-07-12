@@ -21,13 +21,13 @@ console.log(mobileCheck())
 // import './functions/fix-fullheight';
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from './functions/disable-scroll';
+import { disableScroll } from './functions/disable-scroll';
 
 // Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from './functions/enable-scroll';
+import { enableScroll } from './functions/enable-scroll';
 
 // Реализация модального окна
 // import GraphModal from 'graph-modal';
@@ -38,7 +38,19 @@ console.log(mobileCheck())
 // const tabs = new GraphTabs('tab');
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
-// import { getHeaderHeight } from './functions/header-height';
+import { getHeaderHeight } from './functions/header-height';
+
+console.log()
+
+window.addEventListener("DOMContentLoaded", () => {
+  getHeaderHeight();
+});
+
+window.addEventListener("resize", () => {
+  getHeaderHeight();
+});
+
+
 
 // Подключение плагина кастом-скролла
 // import 'simplebar';

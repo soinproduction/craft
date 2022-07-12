@@ -3,4 +3,19 @@
   display: grid;
   grid-template-columns: 260px 1fr;
   grid-gap: clamp(20px, 3.333vw, 40px);
+
+  @media screen and (max-width: 1025px) {
+    grid-template-columns: 100%;
+
+    &__inner {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__inner {
+      grid-template-columns: 100%;
+    }
+  }
 }

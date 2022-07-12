@@ -1,0 +1,36 @@
+.catalog-aside {
+  max-width: 280px;
+  width: 100%;
+  margin-top: 210px;
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: var(--color-a);
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 1025px) {
+    position: absolute;
+    left: 0px;
+    transform: translateX(-150%);
+    transition: all .4s;
+    background-color: var(--body-bg);
+    z-index: 50;
+    margin-top: 0;
+    top: 250px;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.415);
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 3px 3px 50px 16px rgba(0,0,0,0.7);
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+}
