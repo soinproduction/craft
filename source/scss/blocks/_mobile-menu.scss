@@ -1,5 +1,4 @@
-.burger,
-.mobile-filters {
+.burger{
   width: 20px;
   display: flex;
   flex-direction: column;
@@ -38,6 +37,28 @@
     display: none;
   }
 
+}
+
+.mobile-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 26px;
+  background: var(--plus-bg);
+  border: 2px solid var(--plus-bg);
+
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--color-a);
+
+
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
 }
 
 

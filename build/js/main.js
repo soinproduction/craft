@@ -19,6 +19,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_accordions__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_to_top__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/to-top */ "./source/js/components/to-top.js");
 /* harmony import */ var _components_to_top__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_to_top__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/select */ "./source/js/components/select.js");
+/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_select__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -232,6 +235,37 @@ lightGallery(document.getElementById('sert'));
 
 /***/ }),
 
+/***/ "./source/js/components/select.js":
+/*!****************************************!*\
+  !*** ./source/js/components/select.js ***!
+  \****************************************/
+/***/ (function() {
+
+const select = document.querySelectorAll(".select");
+
+if (select.length) {
+  select.forEach(item => {
+    const selectCurrent = item.querySelector(".select__current");
+    item.addEventListener("click", event => {
+      const el = event.target.dataset.choice;
+      const text = event.target.innerText;
+
+      if (el === "choosen" && selectCurrent.innerText !== text) {
+        selectCurrent.innerText = text;
+      }
+
+      item.classList.toggle("active");
+    });
+    document.addEventListener("click", function (event) {
+      if (!item.contains(event.target)) {
+        item.classList.remove("active");
+      }
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./source/js/components/sliders.js":
 /*!*****************************************!*\
   !*** ./source/js/components/sliders.js ***!
@@ -342,7 +376,7 @@ if (document.getElementById('upbutton')) {
   window.onscroll = function () {
     let scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrolled > 100) {
+    if (scrolled > 500) {
       document.getElementById('upbutton').classList.add('show');
     } else {
       document.getElementById('upbutton').classList.remove('show');
@@ -410,11 +444,16 @@ __webpack_require__.r(__webpack_exports__);
     }
   });
   const filterBtn = document.querySelector(".mobile-filters");
+  const filterBack = document.querySelector(".catalog-aside__back");
   const filterMenu = document.querySelector(".catalog-aside");
   filterBtn === null || filterBtn === void 0 ? void 0 : filterBtn.addEventListener('click', function () {
     filterBtn === null || filterBtn === void 0 ? void 0 : filterBtn.classList.toggle('mobile-filters--active');
     filterMenu === null || filterMenu === void 0 ? void 0 : filterMenu.classList.toggle('active');
     overlay === null || overlay === void 0 ? void 0 : overlay.classList.toggle('active');
+  });
+  filterBack === null || filterBack === void 0 ? void 0 : filterBack.addEventListener('click', function () {
+    filterMenu === null || filterMenu === void 0 ? void 0 : filterMenu.classList.remove('active');
+    overlay === null || overlay === void 0 ? void 0 : overlay.classList.remove('active');
   }); //   window.addEventListener('click', function(e) {
   //     if (e.target.classList.contains('catalog-aside.active')) {
   //         console.log('123')

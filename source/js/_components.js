@@ -4,3 +4,4 @@ import './components/galery';
 import './components/filters';
 import './components/accordions';
 import './components/to-top';
+import './components/select';

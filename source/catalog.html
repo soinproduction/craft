@@ -15,20 +15,29 @@
                   Обрати товар:
                 </h2>
 
+                <button class="catalog-aside__back">
+                  <svg width="6" height="10" >
+                    <use href='img/sprite/sprite.svg#back'></use>
+                  </svg>
+                  Фильтры:
+                </button>
+
                 <ul class="catalog-accordion accordions">
                   <li class="catalog-accordion__item">
                     <button class="catalog-accordion__button" data-id="1">
-                      Продукція
+                      <span class="catalog-accordion__button-name">Продукція</span>
                       <svg width='13' height='8'>
                         <use href='img/sprite/sprite.svg#arrow-bottom'></use>
                       </svg>
+
+                      <span class="catalog-accordion__button-value">Пиво</span>
                     </button>
 
                     <ul class="catalog-accordion__checkboxes panel" data-content="1">
                       <li class="catalog-accordion__checkbox">
                         <div class="checkbox">
                           <label class="custom-checkbox">
-                            <input type="checkbox" name="#" value="#">
+                            <input type="radio" name="#" value="#">
                             <span>Ель</span>
                           </label>
                         </div>
@@ -36,7 +45,7 @@
                       <li class="catalog-accordion__checkbox">
                         <div class="checkbox">
                           <label class="custom-checkbox">
-                            <input type="checkbox" name="#" value="#">
+                            <input type="radio" name="#" value="#">
                             <span>Лагер</span>
                           </label>
                         </div>
@@ -44,7 +53,7 @@
                       <li class="catalog-accordion__checkbox">
                         <div class="checkbox">
                           <label class="custom-checkbox">
-                            <input type="checkbox" name="#" value="#">
+                            <input type="radio" name="#" value="#">
                             <span>Бок</span>
                           </label>
                         </div>
@@ -54,10 +63,12 @@
                   </li>
                   <li class="catalog-accordion__item">
                     <button class="catalog-accordion__button" data-id="2">
-                      країна виробник
+
+                      <span class="catalog-accordion__button-name">країна виробник</span>
                       <svg width='13' height='8'>
                         <use href='img/sprite/sprite.svg#arrow-bottom'></use>
                       </svg>
+                      <span class="catalog-accordion__button-value">Укрaїна, Франція</span>
                     </button>
 
                     <ul class="catalog-accordion__checkboxes panel" data-content="2">
@@ -90,10 +101,12 @@
                   </li>
                   <li class="catalog-accordion__item">
                     <button class="catalog-accordion__button" data-id="3">
-                      вид
+
+                      <span class="catalog-accordion__button-name">вид</span>
                       <svg width='13' height='8'>
                         <use href='img/sprite/sprite.svg#arrow-bottom'></use>
                       </svg>
+                      <span class="catalog-accordion__button-value">Всі</span>
                     </button>
 
                     <ul class="catalog-accordion__checkboxes panel" data-content="3">
@@ -126,10 +139,12 @@
                   </li>
                   <li class="catalog-accordion__item">
                     <button class="catalog-accordion__button" data-id="4">
-                      міцність
+
+                      <span class="catalog-accordion__button-name"> міцність</span>
                       <svg width='13' height='8'>
                         <use href='img/sprite/sprite.svg#arrow-bottom'></use>
                       </svg>
+                      <span class="catalog-accordion__button-value">Всі</span>
                     </button>
 
                     <ul class="catalog-accordion__checkboxes panel" data-content="4">
@@ -162,10 +177,12 @@
                   </li>
                   <li class="catalog-accordion__item">
                     <button class="catalog-accordion__button" data-id="5">
-                      гіркість
+
+                      <span class="catalog-accordion__button-name">гіркість</span>
                       <svg width='13' height='8'>
                         <use href='img/sprite/sprite.svg#arrow-bottom'></use>
                       </svg>
+                      <span class="catalog-accordion__button-value">Всі</span>
                     </button>
 
                     <ul class="catalog-accordion__checkboxes panel" data-content="5">
@@ -198,10 +215,12 @@
                   </li>
                   <li class="catalog-accordion__item">
                     <button class="catalog-accordion__button" data-id="6">
-                      Колір
+
+                      <span class="catalog-accordion__button-name">Колір</span>
                       <svg width='13' height='8'>
                         <use href='img/sprite/sprite.svg#arrow-bottom'></use>
                       </svg>
+                      <span class="catalog-accordion__button-value">Всі</span>
                     </button>
 
                     <ul class="catalog-accordion__checkboxes panel" data-content="6">
@@ -234,10 +253,12 @@
                   </li>
                   <li class="catalog-accordion__item">
                     <button class="catalog-accordion__button" data-id="7">
-                      тара
+
+                      <span class="catalog-accordion__button-name">тара</span>
                       <svg width='13' height='8'>
                         <use href='img/sprite/sprite.svg#arrow-bottom'></use>
                       </svg>
+                      <span class="catalog-accordion__button-value">Всі</span>
                     </button>
 
                     <ul class="catalog-accordion__checkboxes panel" data-content="7">
@@ -286,7 +307,7 @@
                     </a>
                   </li>
                   <li class="navigation-list__item">
-                    <a href="catalog.html" class="navigation-list__link">
+                    <a href="catalog.html" class="navigation-list__link navigation-list__link--active">
                       Каталог
                     </a>
                   </li>
@@ -327,16 +348,39 @@
 
                 <h2 class="catalog-section__title">
                   Каталог
-
-                  <button class="mobile-filters">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </button>
-
                 </h2>
 
                 <div class="catalog-filters catalog-section__filters">
+                  <button class="mobile-filters">
+                    Фильтры
+                  </button>
+
+                  <div class="catalog-filters__select">
+
+                      <div class='select'>
+                        <div class='select__header'>
+                          <span class='select__current'>Все</span>
+                          <div class='select__icon'>
+                            <svg width="14" height="8">
+                              <use href='img/sprite/sprite.svg#arrow-bottom'></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class='select__body'>
+                          <ul class='select__wrapp'>
+                            <li class='select__item' data-choice='choosen'>назві</li>
+                            <li class='select__item' data-choice='choosen'>ціні</li>
+                            <li class='select__item' data-choice='choosen'>Рейтингу</li>
+                            <li class='select__item' data-choice='choosen'>популярності</li>
+                            <li class='select__item' data-choice='choosen'>об’єму</li>
+                            <li class='select__item' data-choice='choosen'>країні</li>
+                            <li class='select__item' data-choice='choosen'>тарі</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                  </div>
+
                   <span class="catalog-filters__name">
                     Сортувати по:
                   </span>
@@ -716,6 +760,13 @@
 
 
     @include('partials/footer.html')
+
+    <button class="lift" id="upbutton">
+      <svg width='13' height='8'>
+        <use href='img/sprite/sprite.svg#arrow-bottom'></use>
+      </svg>
+    </button>
+
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 

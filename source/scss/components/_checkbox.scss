@@ -15,12 +15,16 @@
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 27px;
+  line-height: 100%;
   color: var(--color-a);
+
+  @media screen and (max-width: 1025px) {
+    font-size: 14px;
+  }
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
-.custom-checkbox > span::before {
+.custom-checkbox > input[type='checkbox'] + span::before {
   content: '';
   display: inline-block;
   width: 31px;
@@ -33,6 +37,36 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 17px 17px;
+
+
+  @media screen and (max-width: 1025px) {
+    width: 15px;
+    height: 15px;
+    margin-right: 7px;
+    background-size: 70%;
+  }
+}
+
+.custom-checkbox > input[type='radio'] + span::before {
+  content: '';
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid var(--plus-bg);
+  border-radius: 50%;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 17px 17px;
+
+  @media screen and (max-width: 1025px) {
+    width: 15px;
+    height: 15px;
+    background-size: 70%;
+    margin-right: 7px;
+  }
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */

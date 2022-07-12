@@ -3,7 +3,7 @@
 
   window.onscroll = function () {
     let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrolled > 100) {
+    if (scrolled > 500) {
       document.getElementById('upbutton').classList.add('show');
     } else {
       document.getElementById('upbutton').classList.remove('show');

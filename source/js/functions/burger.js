@@ -40,13 +40,21 @@ import { enableScroll } from '../functions/enable-scroll';
   });
 
   const filterBtn = document.querySelector(".mobile-filters");
+  const filterBack = document.querySelector(".catalog-aside__back");
   const filterMenu = document.querySelector(".catalog-aside");
+
 
 
   filterBtn?.addEventListener('click', function(){
     filterBtn?.classList.toggle('mobile-filters--active')
     filterMenu?.classList.toggle('active');
     overlay?.classList.toggle('active');
+  });
+
+
+  filterBack?.addEventListener('click', function(){
+    filterMenu?.classList.remove('active');
+    overlay?.classList.remove('active');
   });
 
   //   window.addEventListener('click', function(e) {
