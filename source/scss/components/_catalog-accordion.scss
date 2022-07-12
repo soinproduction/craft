@@ -35,6 +35,10 @@
       }
 
     }
+
+    &:hover {
+      color: var(--color-a);
+    }
   }
 
   &__checkboxes {

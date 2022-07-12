@@ -45,10 +45,8 @@
   padding: 10px 30px 30px;
   max-width: fit-content;
   width: 100%;
-  height: calc(100% - var(--header-height));
   position: fixed;
   right: 0;
-  bottom: 0;
   top: var(--header-height);
   background-color: black;
   z-index: 50;

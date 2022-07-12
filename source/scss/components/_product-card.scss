@@ -33,9 +33,18 @@
   &__image {
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
 
     picture, img {
       width: 100%;
+    }
+
+    @media screen and (max-width: 576px) {
+      picture, img {
+        width: 80%;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -55,8 +64,8 @@
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: clamp(16px, 1.667vw, 20px);
+    line-height: 110%;
     text-transform: uppercase;
     color: var(--color-a);
   }

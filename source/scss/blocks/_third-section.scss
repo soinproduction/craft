@@ -16,6 +16,14 @@
 
   &__content {
     width: 100%;
+    overflow-x: hidden;
+
+    @media screen and (max-width: 1025px) {
+      margin-left: -10px;
+      margin-right: -10px;
+      width: calc(100% + 20px);
+      padding: 0 10px;
+    }
   }
 
   &__nav {
