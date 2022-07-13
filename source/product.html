@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="Ru">
+  @include('partials/head.html')
+
+<body>
+    @include('partials/header-mode.html')
+
+    <main>
+        <section class="catalog-section product-section">
+          <div class="container">
+            <div class="catalog product">
+
+              <div class="catalog__inner product__inner">
+                <ul class="navigation-list catalog-section__nav product__nav">
+                  <li class="navigation-list__item">
+                    <a href="index.html" class="navigation-list__link">
+                      Головна
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      О нас
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="catalog.html" class="navigation-list__link">
+                      Каталог
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      Акції
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      Наші партнери
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      Доставка
+                    </a>
+                  </li>
+                  <li class="navigation-list__item">
+                    <a href="#" class="navigation-list__link">
+                      Контакти
+                    </a>
+                  </li>
+                </ul>
+
+                <ul class="breadcrumbs catalog-section__breadcrumbs product__breadcrumbs">
+                  <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">
+                      Головна
+                    </a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a href="catalog.html" class="breadcrumbs__link">
+                      Каталог
+                    </a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a href="product.html" class="breadcrumbs__link">
+                      Harviestoun “Old Engine Oil”
+                    </a>
+                  </li>
+                </ul>
+
+
+                <div class="product__box">
+
+                  <div class="single-card single-card--sale">
+                    <h2 class="single-card__title">
+                      Harviestoun “Old Engine Oil” and the <br>
+                      second one string of title
+                    </h2>
+
+                    <div class="single-card__image">
+                      <span class="single-card__deg">
+                        11.3 %
+                      </span>
+                      <picture>
+                        <source type='image/webp' srcset='img/product/single.webp'>
+                        <img width='82' height='363' src='img/product/single.png' alt='product'>
+                      </picture>
+                    </div>
+
+                    <div class="single-card__descr">
+                      <p class="single-card__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et fames faucibus sit et adipiscing sed. Dui, diam mattis lectus ac id elit placerat ullamcorper. Ultricies elementum lacinia feugiat phasellus porttitor amet commodo dis.
+                      </p>
+
+                      <div class="single-card__info">
+                        <div class="single-card__info-coll">
+                          <div class="single-card__info-image">
+                            <picture>
+                              <source type='image/webp' srcset='img/product/info.webp'>
+                              <img width='115' height='115' src='img/product/info.png' alt='image'>
+                            </picture>
+                          </div>
+
+                          <a href="#" class="single-card__info-link">
+                            Відгуки (<span>15</span>)
+                          </a>
+
+                        </div>
+                        <div class="single-card__info-coll">
+                          <ul class="single-card__info-list">
+                            <li class="single-card__info-item">
+                              <span class="single-card__info-title">Країна:</span>
+                              <span class="single-card__info-value">США</span>
+                            </li>
+                            <li class="single-card__info-item">
+                              <span class="single-card__info-title">Вид:</span>
+                              <span class="single-card__info-value">Янтарний ель</span>
+                            </li>
+                            <li class="single-card__info-item">
+                              <span class="single-card__info-title">Колір</span>
+                              <span class="single-card__info-value">Темне, фільтроване</span>
+                            </li>
+                            <li class="single-card__info-item">
+                              <span class="single-card__info-title">Гіркість:</span>
+                              <span class="single-card__info-value">Солодке</span>
+                            </li>
+                            <li class="single-card__info-item">
+                              <span class="single-card__info-title">Густина:</span>
+                              <span class="single-card__info-value">200</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <ul class="single-card__choice">
+                        <li class="single-card__choice-item">
+                          <span class="single-card__choice-name">
+                            Оберіть тару:
+                          </span>
+
+                          <ul class="single-card__choice-list">
+                            <li>
+                              <div class="checkbox choice-button">
+                                <label class="custom-checkbox choice-button__label">
+                                  <input type="radio" name="tare" value="#" checked>
+                                  <span>пляшка</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="checkbox choice-button">
+                                <label class="custom-checkbox choice-button__label">
+                                  <input type="radio" name="tare" value="#">
+                                  <span>банка</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="checkbox choice-button">
+                                <label class="custom-checkbox choice-button__label">
+                                  <input type="radio" name="tare" value="#">
+                                  <span>розлив</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+
+                        </li>
+
+                        <li class="single-card__choice-item">
+                          <span class="single-card__choice-name">
+                            Оберіть тару:
+                          </span>
+
+                          <ul class="single-card__choice-list">
+                            <li>
+                              <div class="checkbox choice-button">
+                                <label class="custom-checkbox choice-button__label">
+                                  <input type="radio" name="volume" value="#" checked>
+                                  <span>пляшка</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="checkbox choice-button">
+                                <label class="custom-checkbox choice-button__label">
+                                  <input type="radio" name="volume" value="#">
+                                  <span>банка</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="checkbox choice-button">
+                                <label class="custom-checkbox choice-button__label">
+                                  <input type="radio" name="volume" value="#">
+                                  <span>розлив</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+
+                        </li>
+                      </ul>
+
+
+
+
+
+                    </div>
+
+                    <div class="single-card__coment">
+                      3
+                    </div>
+
+
+                  </div>
+
+
+
+                </div>
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </section>
+    </main>
+
+
+    @include('partials/footer.html')
+
+    <button class="lift" id="upbutton">
+      <svg width='13' height='8'>
+        <use href='img/sprite/sprite.svg#arrow-bottom'></use>
+      </svg>
+    </button>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

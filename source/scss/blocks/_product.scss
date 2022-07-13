@@ -1,0 +1,22 @@
+.product-section {
+  background-image: none;
+}
+
+.product {
+
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-column: span 2;
+  }
+
+  &__nav,
+  &__breadcrumbs {
+    grid-column: 2;
+  }
+
+  &__box {
+    grid-column: span 2;
+  }
+}
