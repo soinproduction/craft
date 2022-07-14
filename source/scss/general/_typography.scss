@@ -32,4 +32,8 @@
     transform: scale(1.05);
   }
 
+  &.disable {
+    opacity: .3;
+    pointer-events: none;
+  }
 }

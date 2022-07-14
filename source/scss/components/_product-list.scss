@@ -11,9 +11,12 @@
     &.swiper-wrapper {
       display: flex;
       grid-gap: initial;
+      align-items: stretch;
 
       .product-list__item {
-        max-width: 250px;
+        max-width: 280px;
+        width: 100%;
+        height: initial;
       }
     }
   }

@@ -17,15 +17,11 @@ import Swiper from '../vendor/swiper';
     }
   };
   const enableSwiper = function () {
-    slider = new Swiper(".third-section__item", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-      observer: true,
-      observeParents: true,
-      // pagination: {
-      //   el: ".third-section__pagination",
-      //   clickable: true,
-      // },
+    slider = new Swiper(".mobile-slider", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    observer: true,
+    observeParents: true
     });
   };
 
@@ -36,20 +32,13 @@ import Swiper from '../vendor/swiper';
 let mainSlider = new Swiper(".main-slider__box", {
   spaceBetween: 0,
   slidesPerView: 1,
-  // breakpointsInverse: true,
   loop: true,
-
   fadeEffect: {
     crossFade: true
   },
   effect: "fade",
-
   pagination: {
     el: ".main-slider__pagination",
     clickable: true,
-  },
-  // navigation: {
-  //   nextEl: ".table-section__next",
-  //   prevEl: ".table-section__prev",
-  // }
+  }
 });

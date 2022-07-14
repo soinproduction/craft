@@ -50,10 +50,15 @@ input[type=checkbox]:disabled + span {
 
 
   @media screen and (max-width: 1025px) {
-    width: 15px;
-    height: 15px;
-    margin-right: 7px;
-    background-size: 70%;
+
+    &:not(.choice-button) {
+
+      width: 15px;
+      height: 15px;
+      margin-right: 7px;
+      background-size: 70%;
+    }
+
   }
 }
 
@@ -72,10 +77,14 @@ input[type=checkbox]:disabled + span {
   background-size: 17px 17px;
 
   @media screen and (max-width: 1025px) {
-    width: 15px;
-    height: 15px;
-    background-size: 70%;
-    margin-right: 7px;
+
+    &:not(.choice-button)  {
+      width: 15px;
+      height: 15px;
+      background-size: 70%;
+      margin-right: 7px;
+    }
+
   }
 }
 
@@ -90,14 +99,20 @@ input[type=checkbox]:disabled + span {
 }
 
 .choice-button {
-
-
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
 
   &__label {
     position: relative;
     padding: 0 10px;
+    width: 100%;
     z-index: 0;
+    height: 30px;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
 
     input[type=radio] + span::before {
       width: initial;
@@ -121,6 +136,11 @@ input[type=checkbox]:disabled + span {
       font-size: 13px;
       line-height: 16px;
       color:  var(--color-a);
+      justify-content: center;
+
+      &::before {
+        height: 100%;
+      }
     }
   }
 }

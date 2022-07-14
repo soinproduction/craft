@@ -21,6 +21,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_to_top__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_to_top__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/select */ "./source/js/components/select.js");
 /* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_select__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/counter */ "./source/js/components/counter.js");
+/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_counter__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_anchor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/anchor */ "./source/js/components/anchor.js");
+/* harmony import */ var _components_anchor__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_anchor__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_more_review__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/more-review */ "./source/js/components/more-review.js");
+/* harmony import */ var _components_more_review__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_more_review__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
 
 
 
@@ -198,6 +207,54 @@ activateAccordion(accordions, accordionClickHandler);
 
 /***/ }),
 
+/***/ "./source/js/components/anchor.js":
+/*!****************************************!*\
+  !*** ./source/js/components/anchor.js ***!
+  \****************************************/
+/***/ (function() {
+
+const anchorButtons = document.querySelectorAll('.anchor-button');
+
+for (const anchorButton of anchorButtons) {
+  anchorButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = e.target.getAttribute('href').replace('#', '');
+    window.scrollTo({
+      top: document.getElementById("".concat(id)).offsetTop,
+      behavior: 'smooth'
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./source/js/components/counter.js":
+/*!*****************************************!*\
+  !*** ./source/js/components/counter.js ***!
+  \*****************************************/
+/***/ (function() {
+
+const btnMinus = document.querySelectorAll(".number-minus");
+const btnPlus = document.querySelectorAll(".number-plus");
+
+for (const btn of btnPlus) {
+  btn.onclick = function () {
+    const myForm = this.parentElement;
+    const myInput = myForm.querySelector('input');
+    myInput.stepUp();
+  };
+}
+
+for (const btn of btnMinus) {
+  btn.onclick = function () {
+    const myForm = this.parentElement;
+    const myInput = myForm.querySelector('input');
+    myInput.stepDown();
+  };
+}
+
+/***/ }),
+
 /***/ "./source/js/components/filters.js":
 /*!*****************************************!*\
   !*** ./source/js/components/filters.js ***!
@@ -232,6 +289,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_lightbox__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_lightbox__WEBPACK_IMPORTED_MODULE_0__);
 
 lightGallery(document.getElementById('sert'));
+
+/***/ }),
+
+/***/ "./source/js/components/more-review.js":
+/*!*********************************************!*\
+  !*** ./source/js/components/more-review.js ***!
+  \*********************************************/
+/***/ (function() {
+
+const showReviews = document.querySelector('.show-reviews');
+
+if (showReviews) {
+  const reviewItems = [...(showReviews === null || showReviews === void 0 ? void 0 : showReviews.querySelectorAll('.reviews-list__item'))];
+  const showMore = showReviews === null || showReviews === void 0 ? void 0 : showReviews.querySelector('.show-more');
+  let initialValue = 4;
+  const itemLenght = reviewItems.length;
+
+  function showInitialItems(itemArray, count) {
+    [...itemArray.slice(0, count)].map(function (initialItem) {
+      initialItem.style.display = 'flex';
+    });
+  }
+
+  reviewItems.map(function (reviewItem) {
+    reviewItem.style.display = 'none';
+  });
+  showInitialItems(reviewItems, initialValue);
+  showMore.addEventListener('click', function (e) {
+    e.preventDefault();
+    initialValue += 5;
+    initialValue >= itemLenght ? showMore.classList.add('disable') : showMore.classList.remove('disable');
+    showInitialItems(reviewItems, initialValue);
+  });
+}
 
 /***/ }),
 
@@ -294,15 +385,11 @@ __webpack_require__.r(__webpack_exports__);
   };
 
   const enableSwiper = function () {
-    slider = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(".third-section__item", {
+    slider = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(".mobile-slider", {
       slidesPerView: "auto",
       spaceBetween: 20,
       observer: true,
-      observeParents: true // pagination: {
-      //   el: ".third-section__pagination",
-      //   clickable: true,
-      // },
-
+      observeParents: true
     });
   };
 
@@ -313,7 +400,6 @@ __webpack_require__.r(__webpack_exports__);
 let mainSlider = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(".main-slider__box", {
   spaceBetween: 0,
   slidesPerView: 1,
-  // breakpointsInverse: true,
   loop: true,
   fadeEffect: {
     crossFade: true
@@ -322,11 +408,7 @@ let mainSlider = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(".m
   pagination: {
     el: ".main-slider__pagination",
     clickable: true
-  } // navigation: {
-  //   nextEl: ".table-section__next",
-  //   prevEl: ".table-section__prev",
-  // }
-
+  }
 });
 
 /***/ }),

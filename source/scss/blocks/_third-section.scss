@@ -32,6 +32,7 @@
     flex-wrap: wrap;
     align-items: center;
     grid-gap: 30px clamp(40px, 6.667vw, 80px);
+    color: #45454589;
 
     &-item {
       font-family: var(--font-family);

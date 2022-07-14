@@ -1,4 +1,5 @@
 .product-card {
+    height: 100%;
     width: 100%;
     padding: 25px;
     border: 2px solid var(--color-e);
@@ -7,6 +8,15 @@
     flex-direction: column;
     grid-gap: 30px;
     transition: all .4s;
+
+    &__number {
+      display: flex;
+
+
+      .number__label {
+        width: 46px;
+      }
+    }
 
 
     &:hover {
@@ -68,6 +78,7 @@
     line-height: 110%;
     text-transform: uppercase;
     color: var(--color-a);
+    flex-grow: 1;
   }
 
   &__list {
@@ -78,7 +89,7 @@
 
   &__item {
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 80px 1fr;
     grid-gap: 20px;
   }
 

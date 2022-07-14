@@ -1,0 +1,12 @@
+.section-recomendation {
+  padding: clamp(45px, 6.667vw, 80px) 0;
+  background-color: var(--color-b);
+
+  &__top {
+   margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: clamp(25px, 2.917vw, 35px);
+  }
+}
