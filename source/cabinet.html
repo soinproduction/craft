@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header-mode.html')
+
+  <main>
+
+    <section class="top-section">
+      <div class="container">
+        <div class="top-section__box">
+          <ul class="navigation-list top-section__nav">
+            <li class="navigation-list__item">
+              <a href="index.html" class="navigation-list__link">
+                Головна
+              </a>
+            </li>
+            <li class="navigation-list__item">
+              <a href="#" class="navigation-list__link"> О нас </a>
+            </li>
+            <li class="navigation-list__item">
+              <a href="catalog.html" class="navigation-list__link">
+                Каталог
+              </a>
+            </li>
+            <li class="navigation-list__item">
+              <a href="#" class="navigation-list__link"> Акції </a>
+            </li>
+            <li class="navigation-list__item">
+              <a href="#" class="navigation-list__link"> Наші партнери </a>
+            </li>
+            <li class="navigation-list__item">
+              <a href="#" class="navigation-list__link"> Доставка </a>
+            </li>
+            <li class="navigation-list__item">
+              <a href="#" class="navigation-list__link"> Контакти </a>
+            </li>
+          </ul>
+
+          <ul class="breadcrumbs top-section__breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="index.html" class="breadcrumbs__link"> Головна </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Особистиій кабінет</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cabinet">
+        <div class="container">
+          <div class="cabinet__box">
+              <div class="cabinet__top">
+                <p class="cabinet__subtitle">
+                  Вітаю, Віктор, це ваш
+                </p>
+                <h2 class="cabinet__title">
+                  Особистий кабінет
+                </h2>
+              </div>
+
+              <div class="form-tabs tabs-parent ">
+                <div class="form-tabs__nav">
+                  <button class="form-tabs__btn active" data-tab="1">
+                    історія замовлень
+                  </button>
+                  <button class="form-tabs__btn" data-tab="2">
+                    контактна інформація
+                  </button>
+                </div>
+                <ul class="form-tabs__list">
+                  <li class="form-tabs__item active" data-tab-content="1">
+                    <form action="#" class="form-tabs__inner form-tabs__inner--new">
+                      <label class="form-tabs__label" for="#">
+                        <input type="text" placeholder="Прізвище" required>
+                      </label>
+                      <label class="form-tabs__label" for="#">
+                        <input type="text" placeholder="Імʼя" required>
+                      </label>
+                      <label class="form-tabs__label" for="#">
+                        <input type="tel" class="error" placeholder="+38 (   )" required>
+                      </label>
+                      <label class="form-tabs__label" for="#">
+                        <input type="email" placeholder="Email" required>
+                      </label>
+                      <label class="form-tabs__label" for="#">
+                        <input type="password" placeholder="Введіть пароль" required>
+                      </label>
+                      <label class="form-tabs__label" for="#">
+                        <input type="password" placeholder="Повторіть пароль" required>
+                      </label>
+
+                      <div class="form-tabs__bottom">
+                        <a href="#" class="red-border">
+                          оновити данні
+                        </a>
+                      </div>
+                    </form>
+
+
+
+                  </li>
+                  <li class="form-tabs__item" data-tab-content="2">
+                    <form action="#" class="form-tabs__inner cabinet__info">
+
+                      <div class="cabinet__info-coll">
+
+                        <span class="cabinet__info-title">
+                          Особисті данні
+                        </span>
+
+                        <ul class="cabinet__list">
+                          <li class="cabinet__list-item">
+                            <label class="form-tabs__label" for="#">
+                              <input type="text" placeholder="Прізвище" required value="Буденко">
+                            </label>
+                          </li>
+                          <li class="cabinet__list-item">
+                            <label class="form-tabs__label" for="#">
+                              <input type="text" placeholder="Імʼя" required value="Віктор">
+                            </label>
+                          </li>
+                          <li class="cabinet__list-item">
+                            <label class="form-tabs__label" for="#">
+                              <input type="tel" placeholder="+38 (   )" required value="+38 (063) 432-32-61">
+                            </label>
+                          </li>
+                          <li class="cabinet__list-item">
+                            <label class="form-tabs__label" for="#">
+                              <input type="email" placeholder="Email" required value="bud_vik@gmail.com">
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="cabinet__info-coll">
+                        <span class="cabinet__info-title">
+                          Змінити пароль
+                        </span>
+                        <ul class="cabinet__list">
+                          <li class="cabinet__list-item">
+                            <label class="form-tabs__label" for="#">
+                              <input type="password" placeholder="Введіть старий пароль" required>
+                            </label>
+                          </li>
+                          <li class="cabinet__list-item">
+                            <label class="form-tabs__label" for="#">
+                              <input type="password" placeholder="Введіть новий пароль" required>
+                            </label>
+                          </li>
+                          <li class="cabinet__list-item">
+                            <label class="form-tabs__label" for="#">
+                              <input type="password" placeholder="Повторіть пароль" required>
+                            </label>
+                          </li>
+                          <li class="cabinet__list-item">
+                            <a href="#" class="forgot-pass">
+                              Забули свій пароль?
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="form-tabs__bottom">
+                        <a href="#" class="red-border">
+                          оновити данні
+                        </a>
+                      </div>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+
+          </div>
+        </div>
+    </section>
+
+  </main>
+
+  @include('partials/footer.html')
+
+  <button class="lift" id="upbutton">
+    <svg width="13" height="8">
+      <use href="img/sprite/sprite.svg#arrow-bottom"></use>
+    </svg>
+  </button>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

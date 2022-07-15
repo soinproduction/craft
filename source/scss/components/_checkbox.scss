@@ -7,7 +7,10 @@ input[type=checkbox]:disabled + span {
   opacity: .3;
   pointer-events: none;
 }
-
+.custom-checkbox {
+  display:  flex;
+  align-items: center;
+}
 
 .custom-checkbox > input {
   position: absolute;

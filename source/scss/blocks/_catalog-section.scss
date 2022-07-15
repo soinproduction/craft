@@ -9,20 +9,6 @@
     background-image: none;
   }
 
-  &__nav {
-    grid-gap: clamp(15px, 2.5vw, 30px) clamp(15px, 4.167vw, 50px);
-    justify-content: flex-start;
-    margin-bottom: 19px;
-  }
-
-  &__breadcrumbs {
-    margin-bottom: 90px;
-
-    @media screen and (max-width: 1025px) {
-      margin-bottom: 30px;
-    }
-  }
-
   &__title {
     font-family: var(--font-family);
     font-style: normal;

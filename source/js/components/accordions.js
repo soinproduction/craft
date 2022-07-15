@@ -3,7 +3,7 @@ const getAccordions = function(dataName = "[data-id]") {
 }
 
 const accordions = getAccordions();
-let openedAccordion = null;
+// let openedAccordion = null;
 
 const closeAccordion = function (accordion) {
   accordion.style.maxHeight = 0;
@@ -32,15 +32,18 @@ const accordionClickHandler = function () {
 
   if (isAccordionOpen) {
     closeAccordion(accordionContent);
-    openedAccordion = null;
+    // openedAccordion = null;
   } else {
-    if (openedAccordion != null) {
-      closeAccordion(openedAccordion);
-      const accordionButton = document.querySelector(`[data-id="${openedAccordion.dataset.content}"]`)
-      toggleAccordionButton(accordionButton);
-    }
+    // if (openedAccordion != null) {
+
+    //   console.log(openedAccordion )
+
+    //   closeAccordion(openedAccordion);
+    //   const accordionButton = document.querySelector(`[data-id="${openedAccordion.dataset.content}"]`)
+    //   toggleAccordionButton(accordionButton);
+    // }
     openAccordion(accordionContent);
-    openedAccordion = accordionContent;
+    // openedAccordion = accordionContent;
   }
 }
 

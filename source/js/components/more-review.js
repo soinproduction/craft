@@ -1,6 +1,5 @@
 const showReviews = document.querySelector('.show-reviews');
 
-
 if (showReviews) {
   const reviewItems = [...showReviews?.querySelectorAll('.reviews-list__item')];
   const showMore = showReviews?.querySelector('.show-more');

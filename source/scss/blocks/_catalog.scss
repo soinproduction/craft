@@ -1,11 +1,12 @@
 .catalog {
-  padding-top: 36px;
+  padding-top: clamp(30px, 6.667vw, 80px);
   display: grid;
   grid-template-columns: 260px 1fr;
   grid-gap: clamp(20px, 3.333vw, 40px);
 
   @media screen and (max-width: 1025px) {
     grid-template-columns: 100%;
+    padding-top: 30px;
 
     &__inner {
       display: grid;

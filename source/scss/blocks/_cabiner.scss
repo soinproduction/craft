@@ -1,0 +1,59 @@
+.cabinet {
+  padding: clamp(30px, 4.167vw, 50px) 0 clamp(50px, 9.167vw, 110px);
+  background-color: var(--color-a);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(30px, 5vw, 60px);
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(30px, 3.75vw, 45px);
+    line-height: 120%;
+    color: var(--color-b);
+  }
+
+  &__subtitle {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(18px, 2.083vw, 25px);
+    line-height: 120%;
+    color: var(--color-c);
+  }
+
+  &__info {
+    max-width: 670px;
+    grid-gap: 40px;
+
+    &-title {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 500;
+      font-size: clamp(20px, 2.083vw, 25px);
+      line-height: 100%;
+      color: var(--color-b);
+    }
+
+    &-coll {
+      display: flex;
+      flex-direction: column;
+      grid-gap: clamp(20px, 2.5vw, 30px);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 20px;
+  }
+}

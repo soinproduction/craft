@@ -1,0 +1,29 @@
+.top-section {
+  padding: 36px 0 18px;
+
+  &__box {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-gap: 16px clamp(20px, 3.333vw, 40px);
+
+    @media screen and (max-width: 1025px) {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-gap: 16px 0;
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 100%;
+    }
+
+  }
+
+  &__nav,
+  &__breadcrumbs {
+    grid-column: 2;
+
+    @media screen and (max-width: 576px) {
+      grid-column: initial;
+    }
+  }
+}

@@ -36,7 +36,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+ // import './components/inputmask'
 
 /***/ }),
 
@@ -120,11 +120,11 @@ window.addEventListener("resize", () => {
 //   console.log(e.detail.dir);
 // });
 // import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
+// // const rules1 = [...];
 // const afterForm = () => {
 //   console.log('Произошла отправка, тут можно писать любые действия');
 // };
-// validateForms('.form-1', rules1, afterForm);
+// validateForms('.order-form', rules1, afterForm);
 
 /***/ }),
 
@@ -156,8 +156,7 @@ const getAccordions = function () {
   return document.querySelectorAll(dataName);
 };
 
-const accordions = getAccordions();
-let openedAccordion = null;
+const accordions = getAccordions(); // let openedAccordion = null;
 
 const closeAccordion = function (accordion) {
   accordion.style.maxHeight = 0;
@@ -183,17 +182,15 @@ const accordionClickHandler = function () {
   const isAccordionOpen = checkIsAccordionOpen(accordionContent);
 
   if (isAccordionOpen) {
-    closeAccordion(accordionContent);
-    openedAccordion = null;
+    closeAccordion(accordionContent); // openedAccordion = null;
   } else {
-    if (openedAccordion != null) {
-      closeAccordion(openedAccordion);
-      const accordionButton = document.querySelector("[data-id=\"".concat(openedAccordion.dataset.content, "\"]"));
-      toggleAccordionButton(accordionButton);
-    }
-
-    openAccordion(accordionContent);
-    openedAccordion = accordionContent;
+    // if (openedAccordion != null) {
+    //   console.log(openedAccordion )
+    //   closeAccordion(openedAccordion);
+    //   const accordionButton = document.querySelector(`[data-id="${openedAccordion.dataset.content}"]`)
+    //   toggleAccordionButton(accordionButton);
+    // }
+    openAccordion(accordionContent); // openedAccordion = accordionContent;
   }
 };
 
@@ -368,36 +365,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../vendor/swiper */ "./source/js/vendor/swiper.js");
 /* harmony import */ var _vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_swiper__WEBPACK_IMPORTED_MODULE_0__);
 
+const mySlider = document.querySelector('.main-slider__box');
 
-(function () {
-  "use strict";
+if (mySlider) {
+  (function () {
+    "use strict";
 
-  const breakpoint = window.matchMedia("(min-width:1024px)");
-  let slider;
+    const breakpoint = window.matchMedia("(min-width:1024px)");
+    let slider;
 
-  const breakpointChecker = function () {
-    if (breakpoint.matches === true) {
-      if (slider !== undefined) slider.destroy(true, true);
-      return;
-    } else if (breakpoint.matches === false) {
-      return enableSwiper();
-    }
-  };
+    const breakpointChecker = function () {
+      if (breakpoint.matches === true) {
+        if (slider !== undefined) slider.destroy(true, true);
+        return;
+      } else if (breakpoint.matches === false) {
+        return enableSwiper();
+      }
+    };
 
-  const enableSwiper = function () {
-    slider = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(".mobile-slider", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-      observer: true,
-      observeParents: true
-    });
-  };
+    const enableSwiper = function () {
+      slider = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(".mobile-slider", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        observer: true,
+        observeParents: true
+      });
+    };
 
-  breakpoint.addListener(breakpointChecker);
-  breakpointChecker();
-})();
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
+  })();
+}
 
-let mainSlider = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(".main-slider__box", {
+let mainSlider = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(mySlider, {
   spaceBetween: 0,
   slidesPerView: 1,
   loop: true,
@@ -5829,7 +5829,8 @@ __webpack_require__.r(__webpack_exports__);
 // import './_vendor';
 // import vars from './_vars';
 
- // console.log(burgerBtn)
+
+document.querySelector('.order-aside') ? document.body.style.overflowX = 'initial' : document.body.style.overflowX = 'hidden'; // console.log(burgerBtn)
 // getHeaderHeight()
 // const mobileMenuInit = function() {
 //   burgerBtn.classList.toggle('active')

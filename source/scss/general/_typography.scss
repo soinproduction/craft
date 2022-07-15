@@ -1,31 +1,32 @@
 .main-title {
-  font-family: var(--font-family);
   font-style: normal;
   font-weight: 600;
   font-size: clamp(30px, 5vw, 60px);
   line-height: 120%;
+  font-family: var(--font-family);
   text-align: center;
-  text-transform: uppercase;
   color: var(--color-a);
+  text-transform: uppercase;
 }
 
 
 .show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 202px;
   height: 48px;
-  border: 2px solid var(--plus-bg);
 
-
-  font-family: var(--font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: var(--font-family);
   color: var(--color-a);
-  transition: all .4s;
+  text-transform: uppercase;
+
+  border: 2px solid var(--plus-bg);
+
+  transition: all 0.4s;
 
   &:hover {
     background-color: var(--plus-bg);
@@ -33,7 +34,47 @@
   }
 
   &.disable {
-    opacity: .3;
+    opacity: 0.3;
+
     pointer-events: none;
   }
+}
+
+.error-message {
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(13px, 1.25vw, 15px);
+  line-height: 110%;
+  font-family: var(--font-family);
+  color: var(--plus-bg);
+}
+
+.red-border {
+  padding: clamp(10px, 1.25vw, 15px) clamp(15px, 1.667vw, 20px);
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  font-family: var(--font-family);
+  color: var(--color-d);
+  text-transform: uppercase;
+
+  border: 2px solid var(--plus-bg);
+  transition: all .4s;
+
+  &:hover {
+    background-color: var(--plus-bg);
+    color: var(--color-a);
+  }
+}
+
+.forgot-pass {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-decoration-line: underline;
+  color: var(--color-i);
 }
