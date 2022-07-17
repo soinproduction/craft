@@ -1,7 +1,7 @@
 .navigation-list {
   display: flex;
   justify-content: flex-start;
-  grid-gap: 20px clamp(30px, 4.167vw, 50px);
+  grid-gap: 20px clamp(30px, 2.8vw, 50px);
   flex-wrap: wrap;
 
   &__link {
