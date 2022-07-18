@@ -59,14 +59,31 @@ header {
 
   &--mode {
     &::before {
-      left: 0;
+      left: -20px;
+      width: clamp(211px,26.833vw, 322px);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
       transform: none;
+
+      @media screen and (max-width: 1025px) {
+        width: 211px;
+      }
+
+      @media screen and (max-width: 1025px) {
+        width: 120px;
+        left: 0;
+      }
     }
 
     .header__logo {
-      left: 0;
-      transform: translateX(43px);
+      left: Min(5.833vw, 70px);
+      transform: none;
       opacity: .7;
+
+      @media screen and (max-width: 1025px) {
+        left: 25px;
+      }
 
       @media screen and (max-width: 576px) {
         transform: translateX(-50%);

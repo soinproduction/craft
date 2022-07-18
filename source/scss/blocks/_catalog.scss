@@ -4,6 +4,26 @@
   grid-template-columns: 260px 1fr;
   grid-gap: clamp(20px, 3.333vw, 40px);
 
+  .product-card__item {
+    grid-template-columns: 50px 1fr;
+  }
+
+  &__text {
+    padding-top: 30px;
+    font-family: var(--font-family3);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--color-e);
+  }
+
+  &__inner {
+    .show-more {
+      margin: clamp(40px, 6.667vw, 80px) auto 0;
+    }
+  }
+
   @media screen and (max-width: 1025px) {
     grid-template-columns: 100%;
     padding-top: 30px;

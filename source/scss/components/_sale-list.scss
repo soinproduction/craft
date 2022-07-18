@@ -1,7 +1,11 @@
 .sale-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   grid-gap: 50px 20px;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
 
   @media screen and (max-width: 576px) {
     // max-width: 380px;
@@ -15,6 +19,7 @@
     flex-direction: column;
     grid-gap: clamp(10px, 1.667vw, 20px);
     align-items: flex-start;
+    cursor: pointer;
 
     @media screen and (max-width: 576px) {
       width: calc(100vw - 20px);

@@ -8,4 +8,5 @@ import './components/select';
 import './components/counter';
 import './components/anchor';
 import './components/more-review';
+import './components/modals';
 // import './components/inputmask'

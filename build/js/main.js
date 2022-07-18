@@ -27,6 +27,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_anchor__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_anchor__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _components_more_review__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/more-review */ "./source/js/components/more-review.js");
 /* harmony import */ var _components_more_review__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_more_review__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/modals */ "./source/js/components/modals.js");
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_modals__WEBPACK_IMPORTED_MODULE_10__);
+
 
 
 
@@ -286,6 +289,94 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_lightbox__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_lightbox__WEBPACK_IMPORTED_MODULE_0__);
 
 lightGallery(document.getElementById('sert'));
+lightGallery(document.getElementById('sale'));
+
+/***/ }),
+
+/***/ "./source/js/components/modals.js":
+/*!****************************************!*\
+  !*** ./source/js/components/modals.js ***!
+  \****************************************/
+/***/ (function() {
+
+const overlay = document.querySelector('[data-menu-overlay]');
+const ageModalBlock = document.querySelector('[data-modal="age"]');
+const regModalBlock = document.querySelector('[data-modal="reg"]');
+const cartModalBlock = document.querySelector('[data-modal="cart"]');
+const closeModalBtns = [...document.querySelectorAll('.close-modal')];
+const showModalReg = [...document.querySelectorAll('[show-modal]')];
+const showModalCart = [...document.querySelectorAll('[show-cart]')];
+const forgotBtn = document.querySelector('[data-forgot]');
+let age = localStorage.getItem('age');
+
+function hideMobileMenu() {
+  var _document, _document2;
+
+  (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('[data-burger]').classList.remove('burger--active');
+  (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('[data-menu]').classList.remove('mobile-menu--active');
+}
+
+if (ageModalBlock) {
+  if (age != 18) {
+    document.addEventListener('DOMContentLoaded', ageModal(ageModalBlock));
+  }
+
+  function ageModal(modal) {
+    modal.classList.add('active');
+    document.body.classList.add('dis-scroll');
+    document.body.classList.add('modal-overlay');
+    modal.addEventListener('click', function (e) {
+      if (e.target.classList.contains('age-modal__btn--yes')) {
+        localStorage.setItem('age', '18');
+        modal.classList.remove('active');
+        document.body.classList.remove('dis-scroll');
+        document.body.classList.remove('modal-overlay');
+      }
+    });
+  }
+}
+
+showModalReg.map(function (item) {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+    regModalBlock.classList.add('active');
+    overlay.classList.add('active');
+    document.body.classList.remove('dis-scroll');
+    hideMobileMenu();
+  });
+});
+closeModalBtns.map(function (btn) {
+  btn.addEventListener('click', function () {
+    var _document3, _document4;
+
+    document.querySelector('[data-modal].active').classList.remove('active');
+    overlay === null || overlay === void 0 ? void 0 : overlay.classList.remove('active'); // document.body.classList.remove('dis-scroll');
+
+    document.body.classList.remove('modal-overlay');
+    (_document3 = document) === null || _document3 === void 0 ? void 0 : _document3.querySelector('[data-burger]').classList.remove('burger--active');
+    (_document4 = document) === null || _document4 === void 0 ? void 0 : _document4.querySelector('[data-menu]').classList.remove('mobile-menu--active');
+  });
+});
+
+forgotBtn.onclick = function () {
+  document.querySelector('[data-modal].active').classList.remove('active');
+  document.querySelector('[data-modal="forgot"]').classList.add('active');
+  hideMobileMenu();
+};
+
+document.querySelector('[data-back]').onclick = function () {
+  document.querySelector('[data-modal="forgot"]').classList.remove('active');
+  regModalBlock.classList.add('active');
+  hideMobileMenu();
+};
+
+showModalCart.map(function (btn) {
+  btn.addEventListener('click', function () {
+    cartModalBlock.classList.add('active');
+    overlay.classList.add('active');
+    hideMobileMenu();
+  });
+});
 
 /***/ }),
 
@@ -513,12 +604,13 @@ __webpack_require__.r(__webpack_exports__);
       (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     }
   });
-  overlay === null || overlay === void 0 ? void 0 : overlay.addEventListener('click', function () {
+  overlay === null || overlay === void 0 ? void 0 : overlay.addEventListener('click', function (e) {
     if (overlay !== null && overlay !== void 0 && overlay.classList.contains('active')) {
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('mobile-menu--active');
+      document.querySelector('[data-modal].active').classList.remove('active');
       overlay === null || overlay === void 0 ? void 0 : overlay.classList.remove('active');
       filterBtn === null || filterBtn === void 0 ? void 0 : filterBtn.classList.remove('mobile-filters--active');
       filterMenu === null || filterMenu === void 0 ? void 0 : filterMenu.classList.remove('active');

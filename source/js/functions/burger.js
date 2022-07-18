@@ -23,13 +23,13 @@ import { enableScroll } from '../functions/enable-scroll';
     }
   });
 
-  overlay?.addEventListener('click', function() {
-
+  overlay?.addEventListener('click', function(e) {
     if (overlay?.classList.contains('active')) {
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('mobile-menu--active');
+      document.querySelector('[data-modal].active').classList.remove('active');
       overlay?.classList.remove('active');
       filterBtn?.classList.remove('mobile-filters--active')
       filterMenu?.classList.remove('active');
