@@ -26,6 +26,10 @@
     }
   }
 
+  .product-card__item {
+    grid-template-columns: 50px 1fr;
+  }
+
   &__nav {
     display: flex;
     justify-content: center;

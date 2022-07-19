@@ -51,5 +51,11 @@
     b {
       font-weight: 700;
     }
+
+    @media screen and (max-width: 576px) {
+      br:not(br + br) {
+        display: none;
+      }
+    }
   }
 }

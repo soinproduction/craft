@@ -70,7 +70,7 @@ header {
         width: 211px;
       }
 
-      @media screen and (max-width: 1025px) {
+      @media screen and (max-width: 576px) {
         width: 120px;
         left: 0;
       }
@@ -82,7 +82,8 @@ header {
       opacity: .7;
 
       @media screen and (max-width: 1025px) {
-        left: 25px;
+        left: 24px;
+        top: 10px;
       }
 
       @media screen and (max-width: 576px) {

@@ -1,12 +1,12 @@
 .product-card {
     height: 100%;
     width: 100%;
-    padding: 25px;
+    padding: clamp(13px, 2.083vw, 25px);
     border: 2px solid var(--color-e);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    grid-gap: 30px;
+    grid-gap: clamp(16px, 2.5vw, 30px);
     transition: all .4s;
 
     &__number {
@@ -26,8 +26,8 @@
     &--sale {
       position: relative;
       &::before {
-        width: 60px;
-        height: 60px;
+        width: clamp(30px, 5vw, 60px);
+        height: clamp(30px, 5vw, 60px);
         content: '';
         position: absolute;
         background-image: var(--sale-icon);
@@ -35,8 +35,8 @@
         background-repeat: no-repeat;
         background-size: contain;
         z-index: 20;
-        top: 25px;
-        left: 25px;
+        top: clamp(13px, 2.083vw, 25px);
+        left: clamp(13px, 2.083vw, 25px);
       }
     }
 
@@ -74,7 +74,7 @@
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 600;
-    font-size: clamp(16px, 1.667vw, 20px);
+    font-size: clamp(10px, 1.667vw, 20px);
     line-height: 110%;
     text-transform: uppercase;
     color: var(--color-a);
@@ -84,20 +84,20 @@
   &__list {
     display: flex;
     flex-direction: column;
-    grid-gap: 10px;
+    grid-gap: clamp(5px, 0.833vw, 10px);
   }
 
   &__item {
     display: grid;
     grid-template-columns: 80px 1fr;
-    grid-gap: 20px;
+    grid-gap: Min(1.667vw, 20px);
   }
 
   &__title {
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: clamp(8px, 1vw, 12px);
     line-height: 100%;
     color: var(--plus-bg);
   }
@@ -106,7 +106,7 @@
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: clamp(8px, 1vw, 12px);
     line-height: 100%;
     color: var(--color-c);
   }
@@ -118,8 +118,8 @@
   }
 
   &__add {
-    width: 119px;
-    height: 48px;
+    width: clamp(70px, 10vw, 120px);
+    height: clamp(28px, 4vw, 48px);
     border: 2px solid  var(--plus-bg);
     display: flex;
     align-items: center;
@@ -129,7 +129,7 @@
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
-    font-size: 15px;
+    font-size: clamp(8px, 1.25vw, 15px);
     line-height: 100%;
     text-transform: uppercase;
 
@@ -144,15 +144,15 @@
   &__price {
     display: flex;
     flex-direction: column;
-    grid-gap: 10px;
+    grid-gap: clamp(5px, 0.833vw, 10px);
   }
 
   &__volume {
     font-family: var(--font-family2);
     font-style: italic;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: clamp(9px, 1.333vw, 16px);
+    line-height: 100%;
     text-align: center;
     color: var(--color-c);
   }
@@ -161,8 +161,8 @@
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: clamp(13px, 1.667vw, 20px);
+    line-height: 100%;
     color: var(--color-a);
   }
 }

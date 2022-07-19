@@ -2,9 +2,13 @@
   background-color: var(--color-d);
   padding: clamp(40px, 6.667vw, 80px) 0
   clamp(60px, 10vw, 120px);
-  background-image: url(../img/sprite/contact.svg);
+  background-image: url(../img/sprite/catalog-bg.svg);
   background-repeat: no-repeat;
-  background-position: left 200px;
+  background-position: -29vw 100px;
+
+  @media screen and (max-width: 1025px) {
+    background-image: none;
+  }
 
 
   &__top {

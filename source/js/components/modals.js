@@ -1,3 +1,6 @@
+import { disableScroll } from '../functions/disable-scroll';
+import { enableScroll } from '../functions/enable-scroll';
+
 const overlay = document.querySelector('[data-menu-overlay]');
 const ageModalBlock = document.querySelector('[data-modal="age"]');
 const regModalBlock = document.querySelector('[data-modal="reg"]');
@@ -44,7 +47,7 @@ showModalReg.map(function(item){
     overlay.classList.add('active');
     document.body.classList.remove('dis-scroll');
     hideMobileMenu()
-
+    disableScroll();
   });
 })
 
@@ -56,19 +59,22 @@ closeModalBtns.map(function(btn){
     document.body.classList.remove('modal-overlay');
     document?.querySelector('[data-burger]').classList.remove('burger--active')
     document?.querySelector('[data-menu]').classList.remove('mobile-menu--active');
+    enableScroll();
   })
 });
 
 forgotBtn.onclick = function(){
   document.querySelector('[data-modal].active').classList.remove('active');
   document.querySelector('[data-modal="forgot"]').classList.add('active');
-  hideMobileMenu()
+  hideMobileMenu();
+  disableScroll();
 }
 
 document.querySelector('[data-back]').onclick = function(){
   document.querySelector('[data-modal="forgot"]').classList.remove('active');
   regModalBlock.classList.add('active');
-  hideMobileMenu()
+  hideMobileMenu();
+  disableScroll();
 }
 
 
@@ -76,7 +82,8 @@ showModalCart.map(function(btn){
   btn.addEventListener('click', function(){
     cartModalBlock.classList.add('active');
     overlay.classList.add('active')
-    hideMobileMenu()
+    hideMobileMenu();
+    disableScroll();
   })
 })
 

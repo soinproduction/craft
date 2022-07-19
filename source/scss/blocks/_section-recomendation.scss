@@ -1,6 +1,7 @@
 .section-recomendation {
   padding: clamp(45px, 6.667vw, 80px) 0;
   background-color: var(--color-b);
+  position: relative;
 
   &__top {
    margin-bottom: 40px;

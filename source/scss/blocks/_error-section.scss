@@ -1,8 +1,16 @@
 .error-section {
   padding: clamp(30px, 135px, 135px) 0 clamp(300px,45.833vw, 550px);
   background-color: var(--color-a);
+  background-image: url(../../img/error-bg.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   color: var(--color-b);
   position: relative;
+
+  @media screen and (max-width: 1025px) {
+    background-image: none;
+  }
 
   &::before {
     width: clamp(580px,84.167vw, 1010px);

@@ -4,7 +4,7 @@
   &__box {
     display: grid;
     grid-template-columns: 260px 1fr;
-    grid-gap: 16px clamp(20px, 3.333vw, 40px);
+    grid-gap: 17px clamp(20px, 3.333vw, 40px);
 
     @media screen and (max-width: 1025px) {
       display: grid;
@@ -13,7 +13,7 @@
     }
 
     @media screen and (max-width: 576px) {
-      grid-template-columns: 100%;
+      grid-template-columns: 120px 1fr;
     }
 
   }
@@ -22,8 +22,22 @@
   &__breadcrumbs {
     grid-column: 2;
 
+    // @media screen and (max-width: 576px) {
+    //   grid-column: initial;
+    // }
+  }
+
+  &__nav {
     @media screen and (max-width: 576px) {
-      grid-column: initial;
+      display: none;
     }
+  }
+
+  @media screen and (max-width: 1025px) {
+    padding-top: 18px;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 10px 0;
   }
 }

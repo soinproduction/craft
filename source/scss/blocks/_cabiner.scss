@@ -2,9 +2,13 @@
   padding: clamp(30px, 4.167vw, 50px) 0 clamp(50px, 9.167vw, 110px);
   background-color: var(--color-a);
 
-  background-image: url(../img/cabinet.png);
-  background-position: right bottom;
+  background-image: url(../img/sprite/order-bg.svg);
+  background-position: 50vw 150px;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 1025px) {
+    background-image: none;
+  }
 
   &__box {
     display: flex;

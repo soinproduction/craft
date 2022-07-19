@@ -28,7 +28,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_more_review__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/more-review */ "./source/js/components/more-review.js");
 /* harmony import */ var _components_more_review__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_more_review__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/modals */ "./source/js/components/modals.js");
-/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_modals__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
@@ -262,10 +261,28 @@ for (const btn of btnMinus) {
 /***/ (function() {
 
 const myFilters = [...document.querySelectorAll('.catalog-filters__list')];
+let step = 1;
 
 const filterClickHandler = function () {
   const myElement = this;
-  myElement.classList.contains('active') ? myElement.classList.remove('active') : myElement.classList.add('active');
+
+  switch (step) {
+    case 1:
+      myElement.classList.add('active');
+      step += 1;
+      break;
+
+    case 2:
+      myElement.classList.add('active-mode');
+      step += 1;
+      break;
+
+    case 3:
+      myElement.classList.remove('active-mode');
+      myElement.classList.remove('active');
+      step = 1;
+      break;
+  }
 };
 
 myFilters.map(myFilter => {
@@ -297,7 +314,13 @@ lightGallery(document.getElementById('sale'));
 /*!****************************************!*\
   !*** ./source/js/components/modals.js ***!
   \****************************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/disable-scroll */ "./source/js/functions/disable-scroll.js");
+/* harmony import */ var _functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/enable-scroll */ "./source/js/functions/enable-scroll.js");
+
 
 const overlay = document.querySelector('[data-menu-overlay]');
 const ageModalBlock = document.querySelector('[data-modal="age"]');
@@ -343,6 +366,7 @@ showModalReg.map(function (item) {
     overlay.classList.add('active');
     document.body.classList.remove('dis-scroll');
     hideMobileMenu();
+    (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
   });
 });
 closeModalBtns.map(function (btn) {
@@ -355,6 +379,7 @@ closeModalBtns.map(function (btn) {
     document.body.classList.remove('modal-overlay');
     (_document3 = document) === null || _document3 === void 0 ? void 0 : _document3.querySelector('[data-burger]').classList.remove('burger--active');
     (_document4 = document) === null || _document4 === void 0 ? void 0 : _document4.querySelector('[data-menu]').classList.remove('mobile-menu--active');
+    (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
   });
 });
 
@@ -362,12 +387,14 @@ forgotBtn.onclick = function () {
   document.querySelector('[data-modal].active').classList.remove('active');
   document.querySelector('[data-modal="forgot"]').classList.add('active');
   hideMobileMenu();
+  (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
 };
 
 document.querySelector('[data-back]').onclick = function () {
   document.querySelector('[data-modal="forgot"]').classList.remove('active');
   regModalBlock.classList.add('active');
   hideMobileMenu();
+  (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
 };
 
 showModalCart.map(function (btn) {
@@ -375,6 +402,7 @@ showModalCart.map(function (btn) {
     cartModalBlock.classList.add('active');
     overlay.classList.add('active');
     hideMobileMenu();
+    (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
   });
 });
 
@@ -592,7 +620,9 @@ __webpack_require__.r(__webpack_exports__);
   burger === null || burger === void 0 ? void 0 : burger.addEventListener('click', e => {
     burger === null || burger === void 0 ? void 0 : burger.classList.toggle('burger--active');
     menu === null || menu === void 0 ? void 0 : menu.classList.toggle('mobile-menu--active');
-    overlay === null || overlay === void 0 ? void 0 : overlay.classList.toggle('active');
+    overlay === null || overlay === void 0 ? void 0 : overlay.classList.add('active');
+    filterBtn === null || filterBtn === void 0 ? void 0 : filterBtn.classList.remove('mobile-filters--active');
+    filterMenu === null || filterMenu === void 0 ? void 0 : filterMenu.classList.remove('active');
 
     if (menu !== null && menu !== void 0 && menu.classList.contains('mobile-menu--active')) {
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'true');
@@ -601,19 +631,7 @@ __webpack_require__.r(__webpack_exports__);
     } else {
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
-      (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
-    }
-  });
-  overlay === null || overlay === void 0 ? void 0 : overlay.addEventListener('click', function (e) {
-    if (overlay !== null && overlay !== void 0 && overlay.classList.contains('active')) {
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
-      burger.classList.remove('burger--active');
-      menu.classList.remove('mobile-menu--active');
-      document.querySelector('[data-modal].active').classList.remove('active');
       overlay === null || overlay === void 0 ? void 0 : overlay.classList.remove('active');
-      filterBtn === null || filterBtn === void 0 ? void 0 : filterBtn.classList.remove('mobile-filters--active');
-      filterMenu === null || filterMenu === void 0 ? void 0 : filterMenu.classList.remove('active');
       (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     }
   });
@@ -642,6 +660,23 @@ __webpack_require__.r(__webpack_exports__);
   //     enableScroll();
   //   });
   // });
+
+  overlay === null || overlay === void 0 ? void 0 : overlay.addEventListener('click', function (e) {
+    if (overlay !== null && overlay !== void 0 && overlay.classList.contains('active')) {
+      var _document$querySelect;
+
+      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
+      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
+      burger.classList.remove('burger--active');
+      menu.classList.remove('mobile-menu--active');
+      (_document$querySelect = document.querySelector('[data-modal].active')) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.classList.remove('active');
+      overlay === null || overlay === void 0 ? void 0 : overlay.classList.remove('active');
+      filterBtn === null || filterBtn === void 0 ? void 0 : filterBtn.classList.remove('mobile-filters--active');
+      filterMenu === null || filterMenu === void 0 ? void 0 : filterMenu.classList.remove('active');
+      console.log(filterMenu);
+      (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+    }
+  });
 })();
 
 /***/ }),

@@ -5,7 +5,11 @@
    color: var(--color-b);
    background-image: url(../img/sprite/order-bg.svg);
    background-repeat: no-repeat;
-   background-position: right center;
+   background-position: 48vw center;
+
+   @media screen and (max-width: 1025px) {
+    background-image: none;
+   }
 
    &__box {
     display: grid;

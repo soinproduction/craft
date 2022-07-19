@@ -2,7 +2,6 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 37.82%), #a5340f;
   padding: clamp(40px, 6.667vw, 80px) 0 clamp(60px, 8.333vw, 100px);
   position: relative;
-
   &__title {
     font-size: clamp(20px, 2.917vw, 35px);
   }
@@ -18,14 +17,14 @@
     position: relative;
 
     &::before {
-      width: clamp(100%,50.333vw, 604px);
+      width: clamp(100%, 60.167vw, 722px);
       height: clamp(200px,42.5vw, 510px);
       position: absolute;
       // pointer-events: none;
       content: '';
       bottom: calc(clamp(60px, 8.333vw, 100px) * -1);
       left: 0;
-      transform: translateX(calc((Min(50.333vw, 604px) + 63px) * -1));
+      transform: translateX(calc((clamp(100%, 60.167vw, 722px) + 63px) * -1));
       background-image: url(../img/loyal.png);
       background-size: contain;
       background-repeat: no-repeat;
@@ -37,6 +36,10 @@
         left: -10px;
       }
 
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: Min(5vw, 60px);
     }
 
     @media screen and (max-width: 768px) {
