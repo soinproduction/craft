@@ -2,7 +2,7 @@
   --breadcrumbs-arrow: url("data:image/svg+xml,%3Csvg width='8' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.4 11.5 4.9 7 .4 2.5 1.3.7 7.6 7l-6.3 6.3-.9-1.8Z' fill='%23A5340F'/%3E%3C/svg%3E");
   display: flex;
   flex-wrap: wrap;
-  grid-gap: 26px;
+  grid-gap: 7px 26px;
 
   &__item {
     font-family: var(--font-family);
@@ -11,7 +11,7 @@
     font-size: 10px;
     line-height: 12px;
     color: var(--color-c);
-    &:not(:first-child) {
+    &:not(:last-child) {
       position: relative;
 
       &::before {
@@ -22,7 +22,7 @@
         top: 50%;
         transform: translateY(-50%);
         position: absolute;
-        left: -15px;
+        right: -15px;
       }
     }
 

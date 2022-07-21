@@ -8,78 +8,126 @@
     @include('partials/modals.html')
     <main>
         <section class="main-slider">
+
+          <ul class="global-nav">
+            <li class="global-nav__inner">
+              <span class="global-nav__name">Алкоголь</span>
+              <ul class="global-nav__sublist">
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    пиво
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    Сідр
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    вино
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    коньяк
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    горілка
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    віскі
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="global-nav__inner">
+              <span class="global-nav__name">делікатеси</span>
+              <ul class="global-nav__sublist">
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    пиво
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    Сідр
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    вино
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    коньяк
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    горілка
+                  </a>
+                </li>
+                <li class="global-nav__sublist-item">
+                  <a href="#">
+                    віскі
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
           <div class="main-slider__box swiper-container">
             <ul class="main-slider__wrapper swiper-wrapper">
-              <li class="main-slider__slide swiper-slide" style="background-image: url(img/main-slider/img.png)">
-                <ul class="main-slider__descr">
-                  <li class="main-slider__descr-item">
-                    <a href="#">пиво</a>
-                  </li>
-
-                  <li class="main-slider__descr-item">
-                    <a href="#">вина</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">сідри</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">снекі</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">сири</a>
-                  </li>
-                </ul>
-
+              <li class="main-slider__slide swiper-slide">
+                <h2 class="main-slider__title main-title">
+                  Крафтові вироби <br>
+                  на любий <br>
+                  смак
+                </h2>
+                <video muted autoplay poster="img/video-poster.png" class="slider-bg bg-video">
+                  <source src="img/video.mp4" type="video/mp4">
+                  <source src="img/video.webm" type="video/webm">
+                </video>
+              </li>
+              <li class="main-slider__slide swiper-slide">
+                <div class="slider-bg">
+                  <picture>
+                    <source type='image/webp' srcset='img/main-slider/img.webp'>
+                    <img width='1920' height='1080' src='img/main-slider/img.png' alt='image'>
+                  </picture>
+                </div>
                 <h2 class="main-slider__title main-title">
                   Крафтові вироби <br>
                   на любий <br>
                   смак
                 </h2>
               </li>
-              <li class="main-slider__slide swiper-slide" style="background-image: url(img/main-slider/img2.png)">
-                <ul class="main-slider__descr">
-                  <li class="main-slider__descr-item">
-                    <a href="#">пиво</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">вина</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">сідри</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">снекі</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">сири</a>
-                  </li>
-                </ul>
-
+              <li class="main-slider__slide swiper-slide">
+                <div class="slider-bg">
+                  <picture>
+                    <source type='image/webp' srcset='img/main-slider/img2.webp'>
+                    <img width='1920' height='1080' src='img/main-slider/img2.png' alt='image'>
+                  </picture>
+                </div>
                 <h2 class="main-slider__title main-title">
                   Крафтові вироби <br>
                   на любий <br>
                   смак
                 </h2>
               </li>
-              <li class="main-slider__slide swiper-slide" style="background-image: url(img/main-slider/img3.png)">
-                <ul class="main-slider__descr">
-                  <li class="main-slider__descr-item">
-                    <a href="#">пиво</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">вина</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">сідри</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">снекі</a>
-                  </li>
-                  <li class="main-slider__descr-item">
-                    <a href="#">сири</a>
-                  </li>
-                </ul>
-
+              <li class="main-slider__slide swiper-slide">
+                <div class="slider-bg">
+                  <picture>
+                    <source type='image/webp' srcset='img/main-slider/img3.webp'>
+                    <img width='1920' height='1080' src='img/main-slider/img3.png' alt='image'>
+                  </picture>
+                </div>
                 <h2 class="main-slider__title main-title">
                   Крафтові вироби <br>
                   на любий <br>

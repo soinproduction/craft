@@ -14,7 +14,12 @@
 
 
       .number__label {
-        width: 46px;
+        width: clamp(28px, 3.833vw, 46px);
+        height: clamp(28px, 3.833vw, 46px);
+
+        input {
+          font-size: clamp(14px, 1.667vw, 20px);
+        }
       }
     }
 

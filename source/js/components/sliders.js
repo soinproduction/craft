@@ -1,13 +1,28 @@
 import Swiper from '../vendor/swiper';
+console.log('12345')
 
 const mySlider = document.querySelector('.main-slider__box');
+const mobileSlider = document.querySelector('.mobile-slider');
 
-if (mySlider) {
+if (mobileSlider) {
   (function () {
     "use strict";
 
     const breakpoint = window.matchMedia("(min-width:1024px)");
     let slider;
+
+
+    console.log('12345')
+
+
+    const enableSwiper = function () {
+      slider = new Swiper(mobileSlider, {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      observer: true,
+      observeParents: true
+      });
+    };
 
     const breakpointChecker = function () {
       if (breakpoint.matches === true) {
@@ -18,14 +33,6 @@ if (mySlider) {
         return enableSwiper();
       }
     };
-    const enableSwiper = function () {
-      slider = new Swiper(".mobile-slider", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-      observer: true,
-      observeParents: true
-      });
-    };
 
     breakpoint.addListener(breakpointChecker);
     breakpointChecker();
@@ -33,17 +40,20 @@ if (mySlider) {
 }
 
 
+if (mySlider) {
+  let mainSlider = new Swiper(mySlider, {
+    spaceBetween: 0,
+    slidesPerView: 1,
+    loop: true,
+    fadeEffect: {
+      crossFade: true
+    },
+    effect: "fade",
+    pagination: {
+      el: ".main-slider__pagination",
+      clickable: true,
+    }
+  });
+}
 
-let mainSlider = new Swiper(mySlider, {
-  spaceBetween: 0,
-  slidesPerView: 1,
-  loop: true,
-  fadeEffect: {
-    crossFade: true
-  },
-  effect: "fade",
-  pagination: {
-    el: ".main-slider__pagination",
-    clickable: true,
-  }
-});
+

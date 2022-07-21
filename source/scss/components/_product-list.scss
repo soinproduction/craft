@@ -18,6 +18,7 @@
       display: flex;
       grid-gap: initial;
       align-items: stretch;
+      grid-template-columns: initial;
 
       .product-list__item {
         max-width: clamp(180px, 23.333vw, 280px);

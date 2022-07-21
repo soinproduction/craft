@@ -30,7 +30,12 @@
 
     @media screen and (max-width: 1025px) {
       grid-template-columns: 220px 1fr;
-      width: calc(100vw - 20px);
+      // width: calc(100vw - 20px);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 220px 1fr;
+      // width: calc(100vw - 40px);
     }
 
     @media screen and (max-width: 576px) {
