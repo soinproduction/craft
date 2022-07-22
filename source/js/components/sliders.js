@@ -1,42 +1,39 @@
 import Swiper from '../vendor/swiper';
-console.log('12345')
 
 const mySlider = document.querySelector('.main-slider__box');
-const mobileSlider = document.querySelector('.mobile-slider');
 
-if (mobileSlider) {
-  (function () {
-    "use strict";
+for (const mobileSlider of document.querySelectorAll('.mobile-slider')) {
+  if (mobileSlider) {
+    (function () {
+      "use strict";
 
-    const breakpoint = window.matchMedia("(min-width:1024px)");
-    let slider;
+      const breakpoint = window.matchMedia("(min-width:1024px)");
+      let slider;
 
+      const enableSwiper = function () {
+        slider = new Swiper(mobileSlider, {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        observer: true,
+        observeParents: true
+        });
+      };
 
-    console.log('12345')
+      const breakpointChecker = function () {
+        if (breakpoint.matches === true) {
+          if (slider !== undefined) slider.destroy(true, true);
 
+          return;
+        } else if (breakpoint.matches === false) {
+          return enableSwiper();
+        }
+      };
 
-    const enableSwiper = function () {
-      slider = new Swiper(mobileSlider, {
-      slidesPerView: "auto",
-      spaceBetween: 10,
-      observer: true,
-      observeParents: true
-      });
-    };
+      breakpoint.addListener(breakpointChecker);
+      breakpointChecker();
+    })();
+  }
 
-    const breakpointChecker = function () {
-      if (breakpoint.matches === true) {
-        if (slider !== undefined) slider.destroy(true, true);
-
-        return;
-      } else if (breakpoint.matches === false) {
-        return enableSwiper();
-      }
-    };
-
-    breakpoint.addListener(breakpointChecker);
-    breakpointChecker();
-  })();
 }
 
 

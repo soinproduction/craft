@@ -36,10 +36,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    transition: all .4s;
+
     background-color: var(--color-d);
+    z-index: 1;
 
     &:hover {
+      z-index: 2;
+      transition: all .4s;
       transform: scale(1.1);
     }
 

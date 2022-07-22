@@ -2,90 +2,116 @@
 <html lang="Ru">
   @include('partials/head.html')
 
-<body>
+<body class="has-video">
     @include('partials/header.html')
 
     @include('partials/modals.html')
     <main>
         <section class="main-slider">
 
-          <ul class="global-nav">
+          <ul class="global-nav" data-aos-duration="2000"  data-aos="fade-up" data-aos-delay="11000">
             <li class="global-nav__inner">
-              <span class="global-nav__name">Алкоголь</span>
-              <ul class="global-nav__sublist">
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    пиво
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    Сідр
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    вино
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    коньяк
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    горілка
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    віскі
-                  </a>
-                </li>
-              </ul>
+              <span class="global-nav__name" data-trigger>делікатеси</span>
+              <div class="global-nav__wrapper">
+
+                <span class="global-nav__title">
+                  Оберіть вид алкоголю
+                </span>
+
+                <button class="global-nav__close" data-trigger>
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#closenav'></use>
+                  </svg>
+                </button>
+
+                <ul class="global-nav__sublist">
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      пиво
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      Сідр
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      вино
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      коньяк
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      горілка
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      віскі
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="global-nav__inner">
               <span class="global-nav__name">делікатеси</span>
-              <ul class="global-nav__sublist">
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    пиво
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    Сідр
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    вино
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    коньяк
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    горілка
-                  </a>
-                </li>
-                <li class="global-nav__sublist-item">
-                  <a href="#">
-                    віскі
-                  </a>
-                </li>
-              </ul>
+              <div class="global-nav__wrapper">
+
+                <span class="global-nav__title">
+                  Оберіть вид алкоголю
+                </span>
+
+                <button class="global-nav__close">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#closenav'></use>
+                  </svg>
+                </button>
+
+                <ul class="global-nav__sublist">
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      пиво
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      Сідр
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      вино
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      коньяк
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      горілка
+                    </a>
+                  </li>
+                  <li class="global-nav__sublist-item">
+                    <a href="#">
+                      віскі
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
 
           <div class="main-slider__box swiper-container">
             <ul class="main-slider__wrapper swiper-wrapper">
               <li class="main-slider__slide swiper-slide bg-video">
-                <h2 class="main-slider__title main-title">
+                <h2 class="main-slider__title main-title" data-aos-duration="2000"  data-aos="fade-up" data-aos-delay="10000">
                   Крафтові вироби <br>
                   на любий <br>
                   смак
@@ -98,7 +124,7 @@
                     <img width='1920' height='1080' src='img/main-slider/img.png' alt='image'>
                   </picture>
                 </div>
-                <h2 class="main-slider__title main-title">
+                <h2 class="main-slider__title main-title"  data-aos-duration="2000"  data-aos="fade-up" data-aos-delay="10000">
                   Крафтові вироби <br>
                   на любий <br>
                   смак
@@ -111,7 +137,7 @@
                     <img width='1920' height='1080' src='img/main-slider/img2.png' alt='image'>
                   </picture>
                 </div>
-                <h2 class="main-slider__title main-title">
+                <h2 class="main-slider__title main-title"  data-aos-duration="2000"  data-aos="fade-up" data-aos-delay="10000">
                   Крафтові вироби <br>
                   на любий <br>
                   смак
@@ -124,7 +150,7 @@
                     <img width='1920' height='1080' src='img/main-slider/img3.png' alt='image'>
                   </picture>
                 </div>
-                <h2 class="main-slider__title main-title">
+                <h2 class="main-slider__title main-title"  data-aos-duration="2000"  data-aos="fade-up" data-aos-delay="10000">
                   Крафтові вироби <br>
                   на любий <br>
                   смак
@@ -272,6 +298,11 @@
                   <ul class="product-list swiper-wrapper">
                     <li class="product-list__item swiper-slide">
                       <div class="product-card">
+                        <span class="product-card__viget">
+                          Нове
+                          <img src="img/sprite/vidget.svg" width="60" height="60" alt="sticker">
+                        </span>
+
                         <a href="product.html" class="product-card__image">
                           <span class="product-card__deg">
                             11.3 %
@@ -322,12 +353,20 @@
                       </div>
                     </li>
                     <li class="product-list__item swiper-slide">
-                      <div class="product-card">
+                      <div class="product-card product-card--disable">
+                        <span class="product-card__viget">
+                          Нове
+                          <img src="img/sprite/vidget.svg" width="60" height="60" alt="sticker">
+                        </span>
                         <a href="product.html" class="product-card__image">
                           <span class="product-card__deg">
                             11.3 %
                           </span>
                           <picture>
+                            <span class="product-card__availability">
+                              Немає <br>
+                              в наявності
+                            </span>
                             <source type='image/webp' srcset='img/product/img2.webp'>
                             <img width='230' height='260' src='img/product/img2.png' alt='product'>
                           </picture>
@@ -374,6 +413,10 @@
                     </li>
                     <li class="product-list__item swiper-slide">
                       <div class="product-card">
+                        <span class="product-card__viget">
+                          Нове
+                          <img src="img/sprite/vidget.svg" width="60" height="60" alt="sticker">
+                        </span>
                         <a href="product.html" class="product-card__image">
                           <span class="product-card__deg">
                             11.3 %

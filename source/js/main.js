@@ -2,7 +2,15 @@ import './_vendor';
 // import vars from './_vars';
 import './_functions';
 import './_components';
+import AOS from 'aos';
 
-document.querySelector('.order-aside') ?
-document.body.style.overflowX = 'initial':
-document.body.style.overflowX = 'hidden';
+AOS.init();
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelector('.order-aside') ?
+  document.body.style.overflowX = 'initial':
+  document.body.style.overflowX = 'hidden';
+});
+
+

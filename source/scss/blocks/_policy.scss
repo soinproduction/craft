@@ -25,7 +25,10 @@
     flex-direction: column;
     align-items: center;
     grid-gap: 20px;
-    &-title {
+    &-title,
+    h2:not([class]),
+    h3:not([class]),
+    h4:not([class]) {
       display: inline-block;
       font-family: var(--font-family);
       font-style: normal;
@@ -35,6 +38,7 @@
       text-transform: uppercase;
       color: var(--color-b);
       text-align: center;
+      margin: initial !important;
     }
   }
 

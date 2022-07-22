@@ -3,35 +3,64 @@
   grid-template-columns: clamp(250px, 31.667vw, 380px) 1fr;
   grid-gap: 0 clamp(25px, 4.5vw, 54px);
 
-  // @media screen and (max-width: 576px) {
-
-  // }
-
-  &--sale {
+  &--disable {
     .single-card__image {
-      position: relative;
-      &::before {
-        width: 60px;
-        height: 60px;
-        content: '';
-        position: absolute;
-        background-image: var(--sale-icon);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        z-index: 20;
-        top: 15px;
-        left: 15px;
+
+      picture,img {
+        opacity: .6;
+        filter: grayscale(20%);
       }
 
-      @media screen and (max-width: 576px) {
-        grid-column: span 2;
-        margin-bottom: 30px;
+      .single-card__availability {
+        opacity: 1;
       }
     }
-
-
   }
+
+
+  &__viget {
+    // opacity: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(5.5px, 0.917vw, 11px);
+    line-height: 100%;
+    text-align: center;
+    width: clamp(35px, 5vw, 60px);
+    height: clamp(35px, 5vw, 60px);
+    color: var(--color-a);
+    top: 15px;
+    left: 15px;
+
+    img {
+      position: absolute;
+      fill: #B69900;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__availability {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(16px, 1.667vw, 20px);
+    line-height: 110%;
+    text-align: center;
+    color: var(--color-a);
+    position: absolute;
+    z-index: 20;
+    opacity: 0;
+  }
+
 
   &__title {
     grid-column: span 2;
@@ -60,21 +89,10 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    // min-height: Min(37.5vw, 450px);
     z-index: 0;
-
-
     picture, img {
       transition: all .4s;
     }
-
-    // &:hover {
-
-    //   picture, img {
-    //     transform: scale(1.2);
-    //   }
-
-    // }
 
     &:after {
       content: '';
@@ -88,6 +106,12 @@
       filter: blur(20px);
       z-index: -1;
       border-radius: 50%;
+    }
+
+
+    @media screen and (max-width: 576px) {
+      grid-column: span 2;
+      margin-bottom: 30px;
     }
   }
 

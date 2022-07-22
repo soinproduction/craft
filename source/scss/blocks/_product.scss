@@ -31,6 +31,7 @@
     @media screen and (max-width: 1025px) {
       grid-template-columns: 220px 1fr;
       // width: calc(100vw - 20px);
+      grid-column: initial;
     }
 
     @media screen and (max-width: 768px) {

@@ -19,6 +19,7 @@
   }
 
   &__inner {
+    position: relative;
     .show-more {
       margin: clamp(40px, 6.667vw, 80px) auto 0;
     }

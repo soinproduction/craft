@@ -10,21 +10,18 @@ header {
     transform: translateX(-50%) translateY(85%);
   }
 
-  50% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(85%);
-  }
-
-  90% {
-    opacity: 0;
-    transform: translateX(-50%) scale(2.3) translateY(85%);
-  }
 
   100% {
     opacity: 1;
-    transform: translateX(-50%) scale(1) translateY(0%);
+    transform: translateX(-50%) translateY(0%);
   }
 }
+
+.has-video .header__logo{
+  opacity: 0;
+  animation: showLogo 2s ease 10s forwards;
+}
+
 
 .header {
   position: relative;
@@ -65,8 +62,7 @@ header {
     z-index: 20;
     top: 20px;
     z-index: 2;
-    opacity: 0;
-    animation: showLogo 2s ease 9s forwards;
+
 
     @media screen and (max-width: 1025px) {
       left: 107px;
