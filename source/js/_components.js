@@ -10,6 +10,5 @@ import './components/anchor';
 import './components/more-review';
 import './components/modals';
 import './components/inputmask';
-import './components/video-bg';
 import './components/replaceEl';
 import './components/main-nav';

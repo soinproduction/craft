@@ -7,7 +7,7 @@ if (showReviews) {
 
   const itemLenght = reviewItems.length;
 
-  if (itemLenght >= initialValue) {
+  if (itemLenght >= initialValue ) {
     function showInitialItems(itemArray,count) {
       [...itemArray.slice(0, count)].map(function(initialItem){
         initialItem.style.display = 'flex';
@@ -25,6 +25,8 @@ if (showReviews) {
       showMore.classList.remove('disable');
       showInitialItems(reviewItems,initialValue);
     });
+  } else {
+    showMore.style.display = 'none'
   }
 
 

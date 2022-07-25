@@ -41,11 +41,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/modals */ "./source/js/components/modals.js");
 /* harmony import */ var _components_inputmask__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/inputmask */ "./source/js/components/inputmask.js");
 /* harmony import */ var _components_inputmask__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_inputmask__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_video_bg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/video-bg */ "./source/js/components/video-bg.js");
-/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
-/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_replaceEl__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/main-nav */ "./source/js/components/main-nav.js");
-
+/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/replaceEl */ "./source/js/components/replaceEl.js");
+/* harmony import */ var _components_replaceEl__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_replaceEl__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/main-nav */ "./source/js/components/main-nav.js");
 
 
 
@@ -591,6 +589,8 @@ if (showReviews) {
       initialValue >= itemLenght ? showMore.classList.add('disable') : showMore.classList.remove('disable');
       showInitialItems(reviewItems, initialValue);
     });
+  } else {
+    showMore.style.display = 'none';
   }
 }
 
@@ -714,6 +714,7 @@ if (mySlider) {
     spaceBetween: 0,
     slidesPerView: 1,
     loop: true,
+    allowTouchMove: true,
     fadeEffect: {
       crossFade: true
     },
@@ -787,37 +788,6 @@ if (document.getElementById('upbutton')) {
     }
 
     ;
-  });
-}
-
-/***/ }),
-
-/***/ "./source/js/components/video-bg.js":
-/*!******************************************!*\
-  !*** ./source/js/components/video-bg.js ***!
-  \******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vendor_vidbg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../vendor/vidbg */ "./source/js/vendor/vidbg.js");
-/* harmony import */ var _vendor_vidbg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_vidbg__WEBPACK_IMPORTED_MODULE_0__);
-
-const videoBlock = document.querySelector('.bg-video');
-
-if (videoBlock) {
-  document.addEventListener("DOMContentLoaded", function () {
-    let mainVideo = new (_vendor_vidbg__WEBPACK_IMPORTED_MODULE_0___default())('.bg-video', {
-      mp4: 'img/video.mp4',
-      webm: 'img/video.webm',
-      poster: 'img/video-poster.png'
-    }, {
-      autoplay: true,
-      controls: false,
-      loop: false,
-      muted: true,
-      playsInline: true
-    });
   });
 }
 

@@ -202,7 +202,7 @@ const images = () => {
 
 
 const video = () => {
-  return src([`${paths.srcImgFolder}/**/**.{webm, mp4}`])
+  return src([`${paths.srcImgFolder}/**/**.{webm, mp4,MPEG-4}`])
     .pipe(dest(paths.buildImgFolder));
 };
 
@@ -244,7 +244,7 @@ const watchFiles = () => {
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
-  watch(`${paths.srcImgFolder}/**/**.{webm,mp4}`, video);
+  watch(`${paths.srcImgFolder}/**/**.{webm,mp4,MPEG-4}`, video);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
   // watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
   watch(paths.srcSvg, svgSprites);

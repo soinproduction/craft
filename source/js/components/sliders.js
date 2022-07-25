@@ -42,6 +42,7 @@ if (mySlider) {
     spaceBetween: 0,
     slidesPerView: 1,
     loop: true,
+    allowTouchMove: true,
     fadeEffect: {
       crossFade: true
     },

@@ -2598,6 +2598,25 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s;
 }
 
+@-webkit-keyframes videoShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes videoShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 .vidbg-container {
   position: absolute;
   z-index: -1;
@@ -2614,14 +2633,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .vidbg-container video {
   position: absolute;
   margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
   top: 50%;
   left: 50%;
+  height: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: 0.25s opacity ease-in-out;
-  transition: 0.25s opacity ease-in-out;
   max-width: none;
   opacity: 0;
+  visibility: hidden;
+  -webkit-animation: videoShow 3s ease-in-out forwards;
+          animation: videoShow 3s ease-in-out forwards;
+}
+@media screen and (min-width: 1025px) {
+  .vidbg-container video {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .vidbg-overlay {
@@ -3388,7 +3417,7 @@ input[type=checkbox]:disabled + span {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  grid-gap: clamp(10px, 0.833vw, 10px) clamp(25px, 2.8vw, 50px);
+  grid-gap: clamp(10px, 0.833vw, 10px) clamp(20px, 3.75vw, 45px);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -4176,6 +4205,14 @@ input[type=checkbox]:disabled + span {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+.single-card__image img, .single-card__image source {
+  max-width: 300px;
+  max-height: 370px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .single-card__image:after {
   content: "";
   position: absolute;
@@ -4250,6 +4287,16 @@ input[type=checkbox]:disabled + span {
   font-size: 12px;
   line-height: 15px;
   color: var(--color-c);
+}
+.single-card__coment .text-danger {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--progress-error);
+  position: absolute;
+  bottom: -25px;
 }
 .single-card__coment-text {
   resize: none;
@@ -4344,7 +4391,6 @@ input[type=checkbox]:disabled + span {
   border: 1px solid var(--color-c);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  pointer-events: none;
 }
 .single-card__coment-send svg {
   fill: var(--color-c);
@@ -4510,6 +4556,10 @@ input[type=checkbox]:disabled + span {
         flex-shrink: 1;
     min-width: 125px;
   }
+}
+.single-card__price-item:first-child {
+  width: 86px;
+  white-space: nowrap;
 }
 .single-card__price-name {
   font-family: var(--font-family);
@@ -6062,7 +6112,7 @@ input[type=checkbox]:disabled + span {
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 700;
-  font-size: clamp(12px, 0.781vw, 15px);
+  font-size: clamp(15px, 0.781vw, 15px);
   line-height: 100%;
   text-transform: uppercase;
   color: var(--color-a);
@@ -6082,6 +6132,15 @@ input[type=checkbox]:disabled + span {
   cursor: pointer;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+@media screen and (max-width: 576px) {
+  .global-nav__name {
+    width: 211px;
+    height: 58px;
+    background-color: transparent;
+    border: 3px solid var(--plus-bg);
+    padding: 0;
+  }
 }
 @media screen and (max-width: 1025px) {
   .global-nav {
@@ -7688,6 +7747,7 @@ footer {
   background-image: url(../img/reviews-bg.png);
   background-position: -320px center;
   background-repeat: no-repeat;
+  background-size: 526px 418px;
 }
 @media screen and (max-width: 1025px) {
   .section-reviews {
@@ -7967,6 +8027,8 @@ footer {
   background-image: url(../img/sprite/order-bg.svg);
   background-position: 50vw 150px;
   background-repeat: no-repeat;
+  font-family: var(--font-family);
+  color: var(--color-d);
 }
 @media screen and (max-width: 1025px) {
   .cabinet {

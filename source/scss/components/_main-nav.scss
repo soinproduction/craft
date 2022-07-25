@@ -126,7 +126,7 @@
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
-    font-size: clamp(12px, 0.781vw, 15px);
+    font-size: clamp(15px, 0.781vw, 15px);
     line-height: 100%;
     text-transform: uppercase;
     color: var(--color-a);
@@ -136,6 +136,14 @@
     user-select: none;
     cursor: pointer;
     transition: all .4s;
+
+    @media screen and (max-width: 576px) {
+      width: 211px;
+      height: 58px;
+      background-color: transparent;
+      border: 3px solid var(--plus-bg);
+      padding: 0;
+    }
   }
 
 
