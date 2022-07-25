@@ -2598,25 +2598,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s;
 }
 
-@-webkit-keyframes videoShow {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes videoShow {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
 .vidbg-container {
   position: absolute;
   z-index: -1;
@@ -2641,10 +2622,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: none;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-animation: videoShow 3s ease-in-out forwards;
-          animation: videoShow 3s ease-in-out forwards;
 }
 @media screen and (min-width: 1025px) {
   .vidbg-container video {
@@ -6140,6 +6117,7 @@ input[type=checkbox]:disabled + span {
     background-color: transparent;
     border: 3px solid var(--plus-bg);
     padding: 0;
+    max-width: 211px;
   }
 }
 @media screen and (max-width: 1025px) {
@@ -6218,7 +6196,6 @@ input[type=checkbox]:disabled + span {
 }
 
 .search-form {
-  height: 34px;
   position: relative;
 }
 .search-form__label {
@@ -6229,7 +6206,7 @@ input[type=checkbox]:disabled + span {
 }
 .search-form__input {
   width: 100%;
-  height: 100%;
+  height: 34px;
   position: relative;
   z-index: 1;
   padding: 0 35px 0 10px;
@@ -6308,8 +6285,29 @@ input[type=checkbox]:disabled + span {
     height: auto;
   }
 }
-.search-form__input:focus + .search-form__button {
+.search-form__input.focus-visible ~ .search-form__button {
   opacity: 1;
+}
+.search-form__input.focus-visible ~ .search-form__clear {
+  opacity: 1;
+}
+.search-form__clear {
+  position: absolute;
+  right: 0;
+  color: var(--color-a);
+  margin-left: auto;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0;
+  font-size: 12px;
+}
+@media screen and (max-width: 576px) {
+  .search-form__clear {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 }
 
 [data-modal] {
@@ -7572,14 +7570,14 @@ footer {
     position: absolute;
     top: 70px;
     right: 0;
-    height: 26px;
     margin: 0;
   }
 }
 @media screen and (max-width: 576px) {
   .catalog-aside__search {
-    position: initial;
-    margin-bottom: 15px;
+    position: relative;
+    margin-bottom: 25px;
+    top: initial;
   }
 }
 @media screen and (max-width: 1025px) {
@@ -8542,7 +8540,7 @@ footer {
   display: flex;
   width: 100%;
   height: 3px;
-  background: var(--plus-bg);
+  background: var(--color-a);
   border-radius: 26px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;

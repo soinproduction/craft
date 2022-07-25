@@ -21,13 +21,14 @@
       position: absolute;
       top: 70px;
       right: 0;
-      height: 26px;
+      // height: 46px;
       margin: 0;
     }
 
     @media screen and (max-width: 576px) {
-      position: initial;
-      margin-bottom: 15px;
+      position: relative;
+      margin-bottom: 25px;
+      top: initial;
     }
   }
 

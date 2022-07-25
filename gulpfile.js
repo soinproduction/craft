@@ -187,7 +187,7 @@ const resources = () => {
 }
 
 const images = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif,webm, mp4}`])
+  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif}`])
     .pipe(gulpif(isProd, image([
       image.mozjpeg({
         quality: 80,
@@ -202,7 +202,7 @@ const images = () => {
 
 
 const video = () => {
-  return src([`${paths.srcImgFolder}/**/**.{webm, mp4,MPEG-4}`])
+  return src([`${paths.srcImgFolder}/**/**.{mp4,webm}`])
     .pipe(dest(paths.buildImgFolder));
 };
 
@@ -301,7 +301,7 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources,  video,images, webpImages, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, scripts, styles, resources, images,  webpImages, video, svgSprites, watchFiles);
 
 exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, video,images, webpImages, svgSprites)
 

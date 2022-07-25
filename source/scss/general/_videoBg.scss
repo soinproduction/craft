@@ -1,13 +1,13 @@
-@keyframes videoShow {
-  0% {
-    opacity: 0;
-  }
+// @keyframes videoShow {
+//   0% {
+//     opacity: 0;
+//   }
 
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
+//   100% {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
 
 .vidbg-container {
   position: absolute;
@@ -32,9 +32,9 @@
   transform: translate(-50%, -50%);
   // transition: 0.25s opacity ease-in-out;
   max-width: none;
-  opacity: 0;
-  visibility: hidden;
-  animation: videoShow 3s ease-in-out forwards;
+  // opacity: 0;
+  // visibility: hidden;
+  // animation: videoShow 3s ease-in-out forwards;
 
 
   @media screen and (min-width: 1025px) {
