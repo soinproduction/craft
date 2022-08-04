@@ -1,4 +1,5 @@
 const showReviews = document.querySelector('.show-reviews');
+const reviewsSection = document.querySelector('.section-reviews');
 
 if (showReviews) {
   const reviewItems = [...showReviews?.querySelectorAll('.reviews-list__item')];
@@ -8,6 +9,7 @@ if (showReviews) {
   const itemLenght = reviewItems.length;
 
   if (itemLenght >= initialValue ) {
+    reviewsSection.classList.add('section-reviews--before')
     function showInitialItems(itemArray,count) {
       [...itemArray.slice(0, count)].map(function(initialItem){
         initialItem.style.display = 'flex';
@@ -26,7 +28,12 @@ if (showReviews) {
       showInitialItems(reviewItems,initialValue);
     });
   } else {
-    showMore.style.display = 'none'
+
+    if(showMore) {
+      showMore.style.display = 'none';
+    }
+
+
   }
 
 

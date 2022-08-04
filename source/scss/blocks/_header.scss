@@ -7,13 +7,11 @@ header {
 @keyframes showLogo {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(85%);
   }
 
 
   100% {
     opacity: 1;
-    transform: translateX(-50%) translateY(0%);
   }
 }
 
@@ -39,19 +37,12 @@ header {
     z-index: 1;
 
     @media screen and (max-width: 1025px) {
-      left: 0;
-      transform: translateX(0%);
-    }
-
-    @media screen and (max-width: 576px) {
       width: 120px;
+      transform: translateX(0%);
       top: 23px;
       background-image: var(--mobile-brow);
       background-repeat: no-repeat;
       background-size: 100% 100%;
-    }
-
-    @media screen and (min-width: 360px) and (max-width: 576px){
       left: -20px;
     }
   }
@@ -59,19 +50,15 @@ header {
   &__logo {
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
     z-index: 20;
     top: 20px;
     z-index: 2;
 
-
     @media screen and (max-width: 1025px) {
-      left: 107px;
-    }
-
-    @media screen and (max-width: 576px) {
       max-width: 54px;
       width: 100%;
-      left: 59px;
+      left: 38px;
       top: 10px;
 
       svg {
@@ -80,9 +67,6 @@ header {
       }
     }
 
-    @media screen and (min-width: 360px) and (max-width: 576px){
-      left: 38px;
-    }
   }
 
   &--mode {
@@ -95,17 +79,15 @@ header {
       transform: none;
 
       @media screen and (max-width: 1025px) {
-        width: 211px;
-      }
-
-      @media screen and (max-width: 576px) {
         width: 120px;
-        left: 0;
-      }
-
-      @media screen and (min-width: 360px) and (max-width: 576px){
+        transform: translateX(0%);
+        top: 23px;
+        background-image: var(--mobile-brow);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
         left: -20px;
       }
+
     }
 
     .header__logo {
@@ -114,22 +96,11 @@ header {
       opacity: .7;
 
       @media screen and (max-width: 1025px) {
-        left: 24px;
-        top: 10px;
-      }
-
-      @media screen and (max-width: 576px) {
-        transform: translateX(-50%);
         max-width: 54px;
         width: 100%;
-        left: 59px;
+        left: 11px;
         top: 10px;
       }
-
-      @media screen and (min-width: 360px) and (max-width: 576px){
-        left: 38px;
-      }
-
     }
 
     .nav-list {

@@ -47,7 +47,7 @@
   height: 26px;
   background: var(--plus-bg);
   border: 2px solid var(--plus-bg);
-
+  text-transform: uppercase;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -93,9 +93,17 @@
   }
 
   &__list {
-    grid-gap: 15px;
+    grid-gap: 10px 15px;
     margin-bottom: 35px;
     position: relative;
+    display: grid;
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 230px;
+
+    .nav-list__item:last-child {
+      grid-column: 2;
+    }
 
     &::before {
       content: '';

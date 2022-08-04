@@ -115,8 +115,9 @@
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
-    font-size: 25px;
+    font-size: clamp(14px, 1.736vw, 25px);
     line-height: 100%;
+    white-space: nowrap;
     color: var(--color-b);
 
     b {

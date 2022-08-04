@@ -1,8 +1,9 @@
-.has-video .global-nav{
-  opacity: 0;
-  left: 50%;
-
-  transform: translateX(-50%) !important;
+@media screen and (min-width: 576px) {
+  .has-video .global-nav{
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%) !important;
+  }
 }
 
 .global-nav {
@@ -30,6 +31,10 @@
 
     @media screen and (max-width: 1025px) {
       width: 100%;
+    }
+
+    @media screen and (max-width: 576px) {
+      position: fixed;
     }
   }
 
@@ -138,12 +143,13 @@
     transition: all .4s;
 
     @media screen and (max-width: 576px) {
-      width: 211px;
-      height: 58px;
+      width: 131px;
+      height: 48px;
       background-color: transparent;
       border: 3px solid var(--plus-bg);
       padding: 0;
       max-width: 211px;
+      font-size: 15px;
     }
   }
 
@@ -156,11 +162,16 @@
   }
 
   @media screen and (max-width: 576px) {
-    top: 60px;
-    bottom: 60px;
-    flex-direction: column;
+    top: initial;
+    bottom: initial;
+    position: relative;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    transform: none;
+    width: initial;
+    left: initial;
+    grid-gap: clamp(15px, 8.333vw, 50px);
 
     &__inner {
       position: initial;

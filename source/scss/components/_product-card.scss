@@ -95,6 +95,17 @@
     transform: translate(-50%, -50%);
   }
 
+  &__limited {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @media screen and (max-width: 576px) {
+      font-size: Min(2.813vw, 12px);
+      transform: translateY(50%);
+    }
+  }
+
   &__image {
     position: relative;
     display: flex;

@@ -11,6 +11,19 @@
     width: 100%;
   }
 
+  &.mode {
+    @media screen and (min-width: 1025px) {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+
+      .product-list__item {
+        max-width: 280px;
+        height: initial;
+      }
+    }
+  }
+
   @media screen and (max-width: 1025px) {
     grid-template-columns: repeat(4, 1fr);
 

@@ -1,6 +1,8 @@
 .search-form {
   // height: 54px;
   // padding-bottom: 20px;
+
+  cursor: pointer;
   position: relative;
   &__label {
     display: flex;
@@ -37,6 +39,8 @@
   }
 
   &__button {
+    width: 19px;
+    height: 19px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

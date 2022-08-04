@@ -50,8 +50,22 @@ if (mySlider) {
     pagination: {
       el: ".main-slider__pagination",
       clickable: true,
-    }
+    },
+    speed: 1200,
+    autoplay: {
+      delay: 15000,
+    },
   });
+}
+
+
+const sectionRecomendation = document.querySelector('.section-recomendation');
+
+if (sectionRecomendation) {
+  const recomendItem = [...sectionRecomendation.querySelectorAll('.product-list__item')]
+  if (recomendItem.length < 4) {
+    sectionRecomendation.querySelector('.product-list').classList.add('mode');
+  }
 }
 
 
