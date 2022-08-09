@@ -1,11 +1,24 @@
 .catalog-section {
-  background-image: url(../img/sprite/catalog-bg.svg);
-  background-position: -28vw bottom;
-  background-repeat: no-repeat;
   padding: 0 0 clamp(30px, 7.5vw, 90px);
+  position: relative;
+
+
+  &::before {
+    width: Min(95.75vw, 1149px);
+    height: Min(95.75vw, 1149px);
+    content: '';
+    position: absolute;
+    background-image: url(../img/sprite/catalog-bg.svg);
+    background-position: -28vw bottom;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: -6.667vw;
+  }
 
   @media screen and (max-width: 1025px) {
-    background-image: none;
+    &::before {
+      display: none;
+    }
   }
 
   &__title {
@@ -23,7 +36,7 @@
   }
 
   &__filters {
-    margin-bottom: 40px;
+    margin-bottom: clamp(20px, 3.333vw, 40px);
   }
 
   @media screen and (max-width: 1025px) {

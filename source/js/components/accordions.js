@@ -1,3 +1,14 @@
+const catalog = document.querySelector('.catalog');
+
+if (catalog) {
+  const accFirst = document.querySelector("[data-id='1']");
+  const accContent = document.querySelector("[data-content='1']");
+  accFirst.classList.add('active');
+  accContent.style.maxHeight = 'initial';
+}
+
+
+
 const getAccordions = function(dataName = "[data-id]") {
   return document.querySelectorAll(dataName);
 }

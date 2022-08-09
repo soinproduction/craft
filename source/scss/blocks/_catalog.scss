@@ -5,7 +5,7 @@
   grid-gap: clamp(20px, 3.333vw, 40px);
 
   .product-card__item {
-    grid-template-columns: clamp(40px, 4.167vw, 50px) 1fr;
+    grid-template-columns: clamp(35px, 4.167vw, 50px) 1fr;
   }
 
   &__text {
@@ -32,17 +32,35 @@
     &__inner {
       display: grid;
       grid-template-columns: 220px 1fr;
+
+      .show-more {
+        grid-column: span 2;
+      }
     }
+
+    &__text {
+      grid-column: span 2;
+    }
+
+
   }
 
   @media screen and (max-width: 576px) {
     &__inner {
       grid-template-columns: 100%;
+
+      .show-more {
+        grid-column: initial;
+      }
     }
 
     .product-list {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
+    }
+
+    &__text {
+      grid-column: initial;
     }
   }
 

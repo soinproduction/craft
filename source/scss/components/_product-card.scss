@@ -64,8 +64,8 @@
     font-size: clamp(5.5px, 0.917vw, 11px);
     line-height: 100%;
     text-align: center;
-    width: clamp(35px, 5vw, 60px);
-    height: clamp(35px, 5vw, 60px);
+    width: clamp(32px, 5vw, 60px);
+    height: clamp(32px, 5vw, 60px);
     color: var(--color-a);
 
     img {
@@ -118,7 +118,7 @@
 
     @media screen and (max-width: 576px) {
       picture, img {
-        width: 80%;
+        // width: 80%;
         margin: 0 auto;
       }
     }
@@ -134,6 +134,11 @@
     position: absolute;
     right: 0;
     top: 0;
+
+    @media screen and (max-width: 576px) {
+      font-size: 9px;
+      line-height: 10px;
+    }
   }
 
   &__name {
@@ -184,7 +189,7 @@
   }
 
   &__add {
-    width: clamp(70px, 10vw, 120px);
+    width: clamp(74px, 10vw, 120px);
     height: clamp(28px, 4vw, 48px);
     border: 2px solid  var(--plus-bg);
     display: flex;

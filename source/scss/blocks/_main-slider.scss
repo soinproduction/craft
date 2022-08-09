@@ -10,6 +10,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  justify-content: center;
 }
 
 .main-slider {
@@ -17,7 +18,7 @@
 
   &__slide {
     padding: clamp(115px ,14.167vw, 170px) 0 clamp(80px,10vw, 120px);
-    min-height: clamp(528px,46.75vw, 560px);
+    min-height: Min(46.75vw, 560px);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -51,12 +52,12 @@
     }
 
     @media screen and (max-width: 1025px) {
-      min-height: 300px;
+      // min-height: 300px;
       padding: 145px 0 100px;
     }
 
     @media screen and (max-width: 576px) {
-      min-height: 144px;
+      min-height: 180px;
       padding: 50px 0 50px;
     }
   }

@@ -125,6 +125,7 @@
   }
 
   &__name {
+    min-width: 140px;
     max-width: 145px;
     padding: 10px clamp(15px, 1.042vw, 20px);
     background-color: var(--plus-bg);
