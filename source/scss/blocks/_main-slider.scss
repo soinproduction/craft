@@ -11,14 +11,21 @@
   bottom: 0;
   right: 0;
   justify-content: center;
+
+  img {
+    // width: 100vw;
+    max-height: 768px;
+  }
 }
 
 .main-slider {
   position: relative;
+  max-height: 768px;
 
   &__slide {
-    padding: clamp(115px ,14.167vw, 170px) 0 clamp(80px,10vw, 120px);
-    min-height: Min(46.75vw, 560px);
+    // padding: clamp(115px ,14.167vw, 170px) 0 clamp(80px,10vw, 120px);
+    min-height: Min(40vw, 768px);
+    max-height: 768px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -51,14 +58,14 @@
       pointer-events: none;
     }
 
-    @media screen and (max-width: 1025px) {
-      // min-height: 300px;
-      padding: 145px 0 100px;
-    }
+    // @media screen and (max-width: 1025px) {
+    //   // min-height: 300px;
+    //   padding: 145px 0 100px;
+    // }
 
     @media screen and (max-width: 576px) {
-      min-height: 180px;
-      padding: 50px 0 50px;
+      min-height: 40vw;
+      padding: 0;
     }
   }
 
@@ -100,11 +107,11 @@
     z-index: 20;
     bottom: -3px;
     z-index: 20;
-    height: 35px;
+    height: clamp(19px, 2.917vw, 35px);
     align-items: center;
     justify-content: center;
-    padding: 0 45px;
-    grid-gap: 20px;
+    padding: 0 clamp(27px, 3.75vw, 45px);
+    grid-gap: clamp(10px, 1.667vw, 20px);
     background-image: var(--pagination-brow);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -112,8 +119,8 @@
 
     .swiper-pagination-bullet {
       display: block;
-      width: 10px;
-      height: 10px;
+      width: clamp(5px, 0.833vw, 10px);
+      height: clamp(5px, 0.833vw, 10px);
       border-radius: 50%;
       background-color: var(--color-c);
       transition: all .4s;

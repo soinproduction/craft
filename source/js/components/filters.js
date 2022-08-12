@@ -45,3 +45,22 @@ myFilters.map((myFilter) => {
     filterItem.addEventListener('click', filterClickHandler);
   });
 });
+
+
+const checkboxes = [...document.querySelectorAll('.catalog-accordion__checkbox > .checkbox')];
+
+for (const checkbox of checkboxes) {
+
+  checkbox.querySelector('.custom-checkbox > input').addEventListener('click', function(e){
+    [...document.querySelectorAll('.checkbox-sublist')].map(function(item){
+      item.classList.remove('show');
+      item.style.maxHeight = 0;
+    });
+    if (e.target.checked) {
+      checkbox.querySelector('.checkbox-sublist').classList.add('show');
+      checkbox.querySelector('.checkbox-sublist').style.maxHeight = checkbox.querySelector('.checkbox-sublist').scrollHeight + "px";
+    }
+  })
+}
+
+

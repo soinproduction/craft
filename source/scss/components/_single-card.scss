@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: clamp(250px, 31.667vw, 380px) 1fr;
   grid-gap: 0 clamp(25px, 4.5vw, 54px);
+  align-items: flex-start;
 
   @media screen and (max-width: 768px) {
     align-items: flex-start;
@@ -95,15 +96,18 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    overflow: hidden;
     z-index: 0;
     position: relative;
     z-index: 1;
+
     picture, img {
       transition: all .4s;
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100%;
+      width: 101%;
+      margin: 0 -2px;
     }
 
     img, source {
@@ -447,7 +451,7 @@
       }
 
       &:first-child {
-        width: 86px;
+        width: 133px;
         white-space: nowrap;
       }
     }
@@ -470,6 +474,7 @@
       font-size: 40px;
       line-height: 100%;
       color: var(--color-a);
+      text-align: center;
 
       b {
         font-size: 23.8806px;

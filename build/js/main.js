@@ -192,9 +192,9 @@ __webpack_require__.r(__webpack_exports__);
   \********************************************/
 /***/ (function() {
 
-const catalog = document.querySelector('.catalog');
+const catalogAcc = document.querySelector('.catalog-accordion');
 
-if (catalog) {
+if (catalogAcc) {
   const accFirst = document.querySelector("[data-id='1']");
   const accContent = document.querySelector("[data-content='1']");
   accFirst.classList.add('active');
@@ -351,6 +351,21 @@ myFilters.map(myFilter => {
     filterItem.addEventListener('click', filterClickHandler);
   });
 });
+const checkboxes = [...document.querySelectorAll('.catalog-accordion__checkbox > .checkbox')];
+
+for (const checkbox of checkboxes) {
+  checkbox.querySelector('.custom-checkbox > input').addEventListener('click', function (e) {
+    [...document.querySelectorAll('.checkbox-sublist')].map(function (item) {
+      item.classList.remove('show');
+      item.style.maxHeight = 0;
+    });
+
+    if (e.target.checked) {
+      checkbox.querySelector('.checkbox-sublist').classList.add('show');
+      checkbox.querySelector('.checkbox-sublist').style.maxHeight = checkbox.querySelector('.checkbox-sublist').scrollHeight + "px";
+    }
+  });
+}
 
 /***/ }),
 
@@ -756,7 +771,7 @@ if (mySlider) {
   let mainSlider = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(mySlider, {
     spaceBetween: 0,
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     allowTouchMove: true,
     fadeEffect: {
       crossFade: true
@@ -766,11 +781,46 @@ if (mySlider) {
       el: ".main-slider__pagination",
       clickable: true
     },
-    speed: 1200,
+    speed: 100,
     autoplay: {
       delay: 15000
+    },
+    on: {
+      slideChange() {
+        if (document.querySelector('.swiper-slide.bg-video.swiper-slide-active')) {
+          document.body.classList.remove('has-video');
+          document.querySelector('.global-nav').removeAttribute('data-aos');
+
+          for (const title of document.querySelectorAll('.main-slider__title')) {
+            title.removeAttribute('data-aos');
+          }
+
+          document.querySelector('.vidbg-container video').playbackRate = 10;
+        }
+      },
+
+      init() {
+        this.el.addEventListener('mouseenter', () => {
+          this.autoplay.start();
+          console.log('123');
+        });
+        this.el.addEventListener('mouseleave', () => {
+          this.autoplay.start();
+          console.log('123dsg');
+        });
+      }
+
     }
-  });
+  }); // mainSlider.on('init', function () {
+  //   if (!document.querySelector('.swiper-slide.bg-video.swiper-slide-active')) {
+  //     document.body.classList.remove('has-video');
+  //   }
+  //   if (document.querySelector('.swiper-slide.bg-video.swiper-slide-active')) {
+  //     document.body.classList.add('has-video');
+  //   }
+  // });
+
+  mainSlider.on('slideChange', function () {}); // console.log(  document.querySelector('.vidbg-container video'))
 }
 
 const sectionRecomendation = document.querySelector('.section-recomendation');

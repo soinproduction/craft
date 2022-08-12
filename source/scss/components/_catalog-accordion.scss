@@ -116,3 +116,20 @@
     grid-gap: 10px;
   }
 }
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  // grid-gap: 10px;
+}
+
+.checkbox-sublist {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  padding-left: 46px;
+
+  &.show {
+    margin-top: 10px;
+  }
+}

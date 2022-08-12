@@ -1,6 +1,6 @@
-const catalog = document.querySelector('.catalog');
+const catalogAcc = document.querySelector('.catalog-accordion');
 
-if (catalog) {
+if (catalogAcc) {
   const accFirst = document.querySelector("[data-id='1']");
   const accContent = document.querySelector("[data-content='1']");
   accFirst.classList.add('active');

@@ -35,6 +35,9 @@ header {
     left: 50%;
     top: 30px;
     z-index: 1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     @media screen and (max-width: 1025px) {
       width: 120px;

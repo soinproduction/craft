@@ -802,13 +802,30 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   opacity: 0;
   transition-property: opacity, transform;
 }
-[data-aos^="fade"][data-aos^="fade"].aos-animate {
-  opacity: 1;
-  transform: none;
+
+.has-video {
+  [data-aos^="fade"][data-aos^="fade"].aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  [data-aos="fade-up"] {
+    transform: translate3d(0, 100px, 0);
+  }
 }
-[data-aos="fade-up"] {
-  transform: none;
+
+body:not(.has-video) {
+  [data-aos^="fade"][data-aos^="fade"].aos-animate {
+    opacity: 1;
+    transform: none;
+    left: initial;
+  }
+
+  [data-aos="fade-up"] {
+    transform: none;
+    left: initial;
+  }
 }
+
 [data-aos="fade-down"] {
   transform: translate3d(0, -100px, 0);
 }
