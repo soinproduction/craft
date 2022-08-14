@@ -12,3 +12,4 @@ import './components/modals';
 import './components/inputmask';
 import './components/replaceEl';
 import './components/main-nav';
+import './components/range';

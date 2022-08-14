@@ -1521,6 +1521,371 @@ body:not(.has-video) [data-aos=fade-up] {
           transform: perspective(2500px) rotateX(0);
 }
 
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.noUi-target {
+  position: relative;
+}
+
+.noUi-base,
+.noUi-connects {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Wrapper for all connect elements.
+ */
+.noUi-connects {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.noUi-connect,
+.noUi-origin {
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: 0 0;
+  -webkit-transform-style: flat;
+          transform-style: flat;
+}
+
+/* Offset direction
+ */
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+  left: 0;
+  right: auto;
+}
+
+/* Give origins 0 height/width so they don't interfere with clicking the
+ * connect elements.
+ */
+.noUi-vertical .noUi-origin {
+  top: -100%;
+  width: 0;
+}
+
+.noUi-horizontal .noUi-origin {
+  height: 0;
+}
+
+.noUi-handle {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.noUi-touch-area {
+  height: 100%;
+  width: 100%;
+}
+
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+  height: 18px;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 34px;
+  height: 28px;
+  right: -17px;
+  top: -6px;
+}
+
+.noUi-vertical {
+  width: 18px;
+}
+
+.noUi-vertical .noUi-handle {
+  width: 28px;
+  height: 34px;
+  right: -6px;
+  bottom: -17px;
+}
+
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
+  left: -17px;
+  right: auto;
+}
+
+/* Styling;
+ * Giving the connect element a border radius causes issues with using transform: scale
+ */
+.noUi-target {
+  background: #FAFAFA;
+  border-radius: 4px;
+  border: 1px solid #D3D3D3;
+  -webkit-box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+          box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+}
+
+.noUi-connects {
+  border-radius: 3px;
+}
+
+.noUi-connect {
+  background: #3FB8AF;
+}
+
+/* Handles and cursors;
+ */
+.noUi-draggable {
+  cursor: ew-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+  cursor: ns-resize;
+}
+
+.noUi-handle {
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #FFF;
+  cursor: default;
+  -webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+          box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+}
+
+.noUi-active {
+  -webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+          box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+}
+
+/* Handle stripes;
+ */
+.noUi-handle:before,
+.noUi-handle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: #E8E7E6;
+  left: 14px;
+  top: 6px;
+}
+
+.noUi-handle:after {
+  left: 17px;
+}
+
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+  width: 14px;
+  height: 1px;
+  left: 6px;
+  top: 14px;
+}
+
+.noUi-vertical .noUi-handle:after {
+  top: 17px;
+}
+
+/* Disabled state;
+ */
+[disabled] .noUi-connect {
+  background: #B8B8B8;
+}
+
+[disabled].noUi-target,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+  cursor: not-allowed;
+}
+
+/* Base;
+ *
+ */
+.noUi-pips,
+.noUi-pips * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.noUi-pips {
+  position: absolute;
+  color: #999;
+}
+
+/* Values;
+ *
+ */
+.noUi-value {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.noUi-value-sub {
+  color: #ccc;
+  font-size: 10px;
+}
+
+/* Markings;
+ *
+ */
+.noUi-marker {
+  position: absolute;
+  background: #CCC;
+}
+
+.noUi-marker-sub {
+  background: #AAA;
+}
+
+.noUi-marker-large {
+  background: #AAA;
+}
+
+/* Horizontal layout;
+ *
+ */
+.noUi-pips-horizontal {
+  padding: 10px 0;
+  height: 80px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.noUi-value-horizontal {
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+
+.noUi-rtl .noUi-value-horizontal {
+  -webkit-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+}
+
+.noUi-marker-horizontal.noUi-marker {
+  margin-left: -1px;
+  width: 2px;
+  height: 5px;
+}
+
+.noUi-marker-horizontal.noUi-marker-sub {
+  height: 10px;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 15px;
+}
+
+/* Vertical layout;
+ *
+ */
+.noUi-pips-vertical {
+  padding: 0 10px;
+  height: 100%;
+  top: 0;
+  left: 100%;
+}
+
+.noUi-value-vertical {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding-left: 25px;
+}
+
+.noUi-rtl .noUi-value-vertical {
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+.noUi-marker-vertical.noUi-marker {
+  width: 5px;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.noUi-marker-vertical.noUi-marker-sub {
+  width: 10px;
+}
+
+.noUi-marker-vertical.noUi-marker-large {
+  width: 15px;
+}
+
+.noUi-tooltip {
+  display: block;
+  position: absolute;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #fff;
+  color: #000;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.noUi-horizontal .noUi-tooltip {
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 120%;
+}
+
+.noUi-vertical .noUi-tooltip {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 120%;
+}
+
+.noUi-horizontal .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+  left: auto;
+  bottom: 10px;
+}
+
+.noUi-vertical .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(0, -18px);
+  transform: translate(0, -18px);
+  top: auto;
+  right: 28px;
+}
+
 @font-face {
   font-family: "swiper-icons";
   src: url("data:application/font-woff;charset=utf-8;base64, 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") format("woff");
@@ -3366,6 +3731,7 @@ input[type=checkbox]:disabled + span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .custom-checkbox > input {
@@ -3767,6 +4133,7 @@ input[type=checkbox]:disabled + span {
 }
 .product-list__item {
   width: 100%;
+  overflow: hidden;
 }
 @media screen and (min-width: 1025px) {
   .product-list.mode {
@@ -3929,8 +4296,18 @@ input[type=checkbox]:disabled + span {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.product-card__image:after {
+  position: absolute;
+  width: calc(100% + clamp(13px, 2.083vw, 25px) * 2);
+  height: 383px;
+  top: calc(clamp(13px, 2.083vw, 25px) * -1);
+  left: calc(clamp(13px, 2.083vw, 25px) * -1);
+  content: "";
+  z-index: 1;
+}
 .product-card__image picture, .product-card__image img {
   width: 100%;
+  min-height: 142px;
 }
 @media screen and (max-width: 576px) {
   .product-card__image picture, .product-card__image img {
@@ -4009,6 +4386,8 @@ input[type=checkbox]:disabled + span {
           justify-content: space-between;
 }
 .product-card__add {
+  position: relative;
+  z-index: 5;
   width: clamp(74px, 10vw, 120px);
   height: clamp(28px, 4vw, 48px);
   border: 2px solid var(--plus-bg);
@@ -6739,6 +7118,99 @@ input[type=checkbox]:disabled + span {
   }
 }
 
+.catalog-accordion__range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 15px;
+  padding-bottom: 7px;
+}
+
+.range-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--color-e);
+  border-radius: 4px;
+  position: relative;
+}
+.range-values::before {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 0;
+  content: "";
+  background-color: var(--color-e);
+}
+.range-values span {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 57px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--color-a);
+}
+@media screen and (max-width: 1024px) {
+  .range-values span {
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--plus-bg);
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  top: -8px;
+  cursor: pointer;
+}
+.noUi-horizontal .noUi-handle::after, .noUi-horizontal .noUi-handle::before {
+  display: none;
+}
+
+.noUi-handle-upper {
+  right: 0 !important;
+}
+
+.noUi-connect {
+  background: var(--plus-bg);
+  height: 5px;
+}
+
+.noUi-target {
+  height: 3px;
+  background: var(--color-b);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+@media screen and (max-width: 1024px) {
+  .noUi-target {
+    background: var(--color-c);
+  }
+}
+
 [data-modal] {
   visibility: hidden;
   position: absolute !important;
@@ -7707,6 +8179,8 @@ footer {
   font-size: clamp(22px, 6.25vw, 90px);
   line-height: 100%;
   font-family: var(--font-family4);
+  -webkit-transform: none !important;
+          transform: none !important;
 }
 .main-slider__title::before {
   position: absolute;
@@ -7738,7 +8212,7 @@ footer {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 20;
-  bottom: -3px;
+  bottom: -6px;
   z-index: 20;
   height: clamp(19px, 2.917vw, 35px);
   -webkit-box-align: center;

@@ -1,10 +1,10 @@
-const myFilters = [...document.querySelectorAll('.catalog-filters__list')];
+window.addEventListener("DOMContentLoaded", event => {
+  const myFilters = [...document.querySelectorAll('.catalog-filters__list')];
 
 let step = 1;
 
 const filterClickHandler = function () {
   const myElement = this;
-
   function removeClassForAllEl() {
     const myElementSiblings = document.querySelectorAll('.catalog-filters__button');
     for (let myElementSibling of myElementSiblings) {
@@ -12,8 +12,6 @@ const filterClickHandler = function () {
       myElementSibling.classList.remove('active');
     }
   }
-
-
 
   switch (step) {
     case 1:
@@ -34,13 +32,10 @@ const filterClickHandler = function () {
       step = 1;
       break;
   }
-
-  // item.classList.remove('active');
 }
 
 myFilters.map((myFilter) => {
   const filterItems = [...myFilter.querySelectorAll('.catalog-filters__button')];
-
   filterItems.map((filterItem) => {
     filterItem.addEventListener('click', filterClickHandler);
   });
@@ -51,16 +46,22 @@ const checkboxes = [...document.querySelectorAll('.catalog-accordion__checkbox >
 
 for (const checkbox of checkboxes) {
 
-  checkbox.querySelector('.custom-checkbox > input').addEventListener('click', function(e){
-    [...document.querySelectorAll('.checkbox-sublist')].map(function(item){
-      item.classList.remove('show');
-      item.style.maxHeight = 0;
-    });
-    if (e.target.checked) {
-      checkbox.querySelector('.checkbox-sublist').classList.add('show');
-      checkbox.querySelector('.checkbox-sublist').style.maxHeight = checkbox.querySelector('.checkbox-sublist').scrollHeight + "px";
-    }
-  })
+  if (checkbox.querySelector('.custom-checkbox > input[type="radio"]')) {
+    checkbox.querySelector('.custom-checkbox > input[type="radio"]').addEventListener('click', function(e){
+      [...document.querySelectorAll('.checkbox-sublist')].map(function(item){
+        item.classList.remove('show');
+        item.style.maxHeight = 0;
+      });
+      if (e.target.checked && checkbox.querySelector('.checkbox-sublist')) {
+        checkbox.querySelector('.checkbox-sublist').classList.add('show');
+        checkbox.querySelector('.checkbox-sublist').style.maxHeight = checkbox.querySelector('.checkbox-sublist').scrollHeight + "px";
+      }
+    })
+  }
+
+
 }
+
+});
 
 

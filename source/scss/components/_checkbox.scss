@@ -10,6 +10,7 @@ input[type=checkbox]:disabled + span {
 .custom-checkbox {
   display:  flex;
   align-items: center;
+  position: relative;
 }
 
 .custom-checkbox > input {

@@ -112,8 +112,19 @@
     align-items: center;
     justify-content: center;
 
+    &:after {
+      position: absolute;
+      width: calc(100% + clamp(13px, 2.083vw, 25px) * 2);
+      height: 383px;
+      top: calc(clamp(13px, 2.083vw, 25px) * -1);
+      left: calc(clamp(13px, 2.083vw, 25px) * -1);
+      content: '';
+      z-index: 1;
+    }
+
     picture, img {
       width: 100%;
+      min-height: 142px;
     }
 
     @media screen and (max-width: 576px) {
@@ -189,6 +200,8 @@
   }
 
   &__add {
+    position: relative;
+    z-index: 5;
     width: clamp(74px, 10vw, 120px);
     height: clamp(28px, 4vw, 48px);
     border: 2px solid  var(--plus-bg);

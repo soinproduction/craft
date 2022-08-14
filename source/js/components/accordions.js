@@ -1,11 +1,14 @@
 const catalogAcc = document.querySelector('.catalog-accordion');
 
-if (catalogAcc) {
-  const accFirst = document.querySelector("[data-id='1']");
-  const accContent = document.querySelector("[data-content='1']");
-  accFirst.classList.add('active');
-  accContent.style.maxHeight = 'initial';
-}
+document.addEventListener("DOMContentLoaded", () => {
+  if (catalogAcc) {
+    const accFirst = document.querySelector("[data-id='1']");
+    const accContent = document.querySelector("[data-content='1']");
+    accFirst.classList.add('active');
+    accContent.style.maxHeight = 'initial';
+  }
+
+});
 
 
 
