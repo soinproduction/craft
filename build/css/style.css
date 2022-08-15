@@ -4299,7 +4299,7 @@ input[type=checkbox]:disabled + span {
 .product-card__image:after {
   position: absolute;
   width: calc(100% + clamp(13px, 2.083vw, 25px) * 2);
-  height: 383px;
+  height: 600px;
   top: calc(clamp(13px, 2.083vw, 25px) * -1);
   left: calc(clamp(13px, 2.083vw, 25px) * -1);
   content: "";
@@ -7148,7 +7148,7 @@ input[type=checkbox]:disabled + span {
   content: "";
   background-color: var(--color-e);
 }
-.range-values span {
+.range-values input {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7166,9 +7166,13 @@ input[type=checkbox]:disabled + span {
   font-size: 20px;
   line-height: 27px;
   color: var(--color-a);
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 @media screen and (max-width: 1024px) {
-  .range-values span {
+  .range-values input {
     height: 40px;
     font-size: 16px;
   }

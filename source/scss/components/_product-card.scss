@@ -115,7 +115,7 @@
     &:after {
       position: absolute;
       width: calc(100% + clamp(13px, 2.083vw, 25px) * 2);
-      height: 383px;
+      height: 600px;
       top: calc(clamp(13px, 2.083vw, 25px) * -1);
       left: calc(clamp(13px, 2.083vw, 25px) * -1);
       content: '';

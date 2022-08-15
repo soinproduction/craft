@@ -665,7 +665,7 @@ rangeSliders.map(slider => {
   });
   let snapValues = [document.querySelector('.range-values__lower'), document.querySelector('.range-values__upper')];
   slider.noUiSlider.on('update', function (values, handle) {
-    snapValues[handle].innerHTML = values[handle];
+    snapValues[handle].value = values[handle];
   });
 });
 
